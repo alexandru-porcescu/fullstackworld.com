@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+$family-sans-serif: "Nunito", sans-serif;
+
+$blue: #081450;
+
+$primary: $blue;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+$desktop-enabled: false;
+
+@import '~bulma';

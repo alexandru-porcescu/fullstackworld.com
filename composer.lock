@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f71dafc8a0be154459bd53ee164e3ce1",
+    "content-hash": "51de7332b41139f4dbf9b5b56d78d180",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1336,6 +1336,67 @@
                 "php"
             ],
             "time": "2018-12-26T11:32:39+00:00"
+        },
+        {
+            "name": "onicial/bulmify",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onicial/bulmify.git",
+                "reference": "4d82365e3cbf75e6ff0340e755215ac4a28ef6b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/onicial/bulmify/zipball/4d82365e3cbf75e6ff0340e755215ac4a28ef6b5",
+                "reference": "4d82365e3cbf75e6ff0340e755215ac4a28ef6b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/php-code-coverage": "*",
+                "phpunit/phpunit": "~7.0",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Onicial\\Bulmify\\BulmifyServiceProvider"
+                    ],
+                    "aliases": {
+                        "Notifications": "Onicial\\Bulmify\\Facades\\Notifications"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Onicial\\Bulmify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ramesh Mhetre",
+                    "email": "info@onicial.ch"
+                },
+                {
+                    "name": "Sebastian Fix",
+                    "email": "info@onicial.ch"
+                }
+            ],
+            "description": "Bulma notifications package for laravel",
+            "keywords": [
+                "bulma",
+                "laravel",
+                "notifications"
+            ],
+            "time": "2018-12-23T18:29:17+00:00"
         },
         {
             "name": "opis/closure",

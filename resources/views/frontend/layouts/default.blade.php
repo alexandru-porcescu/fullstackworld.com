@@ -3,15 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-@include('frontend.layouts.partials._meta')
-
-<!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Hello World!</title>
-
+    @include('frontend.layouts.partials._meta')
     @include('frontend.layouts.partials._styles')
+    @include('frontend.layouts.partials._analytics')
 
 </head>
 <body>
@@ -19,20 +15,29 @@
 <section class="section">
     <div class="container">
 
-        @include('frontend.layouts.partials._navigation')
+
+
+        <div class="columns is-centered">
+
+
+            <div class="column is-9">
+                @include('frontend.layouts.partials._navigation')
+
+
+            </div>
+
+        </div>
 
         @yield('content')
 
         @include('frontend.layouts.partials._footer')
 
-        @include('bulma::notifications')
-
-        @include('frontend.layouts.partials._scripts')
 
     </div>
 
 </section>
 
+@include('frontend.layouts.partials._scripts')
 
 </body>
 </html>
