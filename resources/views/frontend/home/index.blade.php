@@ -2,12 +2,9 @@
 
 @section('content')
 
-    <section class="section ">
-        <div class="container">
-
             <div class="columns is-centered">
 
-                <div class="column is-9">
+                <div class="column is-12">
 
                     <div class="content">
 
@@ -68,8 +65,5 @@
 
 
 
-        </div>
-
-    </section>
 
 @endsection

@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand">
-        <a href="/en/" class="navbar-item router-link-exact-active router-link-active">
+        <a href="/" class="navbar-item router-link-exact-active router-link-active">
             <img src="http://ratenjoy.com/images/rate.png" alt="Fullstackworld" width="112" height="28"></a>
 
 
