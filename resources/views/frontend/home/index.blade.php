@@ -9,7 +9,7 @@
                     <div class="content">
 
                         <div class="short-post">
-                            <h2 class="title is-3">Welcome to blog post!</h2>
+                            <a href="#"><h2 class="title is-3">Welcome to blog post!</h2></a>
                             <h4 class="subtitle is-5">2019.01.07</h4>
 
 
