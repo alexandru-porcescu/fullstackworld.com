@@ -24,7 +24,10 @@ if (notificationBox) {
     timeLimit = bumifyOptions.timer;
 }
 
+
+
 if(cookieBox) {
+
     document.getElementById("bulmify-cookie-msg").innerHTML = bumifyCookie.text;
 
     if(bumifyCookie.options.buttonText) {
@@ -43,13 +46,12 @@ if(cookieBox) {
 
 window.addEventListener('load', function() {
 
-    let cookieAccepted = function() {
-        document.getElementById("bulmify-cookie").style.display = "none";
-        localStorage.setItem('bulmify-cookie-accepted', 'yes');
-    }
+    if(cookieBox) {
 
-    if(document.getElementById('bulmify-cookie') === null ||
-        document.getElementById('bulmify-cookie') === undefined) {
+        let cookieAccepted = function() {
+            document.getElementById("bulmify-cookie").style.display = "none";
+            localStorage.setItem('bulmify-cookie-accepted', 'yes');
+        }
 
         if (localStorage.getItem('bulmify-cookie-accepted')) {
             cookieAccepted;

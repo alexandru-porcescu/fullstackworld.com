@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "51de7332b41139f4dbf9b5b56d78d180",
@@ -639,16 +639,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.19",
+            "version": "v5.7.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c"
+                "reference": "10cd20294b5668f90ba91996236834e71f7ff670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
-                "reference": "5c1d1ec7e8563ea31826fd5eb3f6791acf01160c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/10cd20294b5668f90ba91996236834e71f7ff670",
+                "reference": "10cd20294b5668f90ba91996236834e71f7ff670",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +722,7 @@
                 "moontoast/math": "^1.1",
                 "orchestra/testbench-core": "3.7.*",
                 "pda/pheanstalk": "^3.0",
-                "phpunit/phpunit": "^7.0",
+                "phpunit/phpunit": "^7.5",
                 "predis/predis": "^1.1.1",
                 "symfony/css-selector": "^4.1",
                 "symfony/dom-crawler": "^4.1",
@@ -781,7 +781,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2018-12-18T14:00:38+00:00"
+            "time": "2019-01-08T14:39:11+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
@@ -1339,16 +1339,16 @@
         },
         {
             "name": "onicial/bulmify",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/onicial/bulmify.git",
-                "reference": "4d82365e3cbf75e6ff0340e755215ac4a28ef6b5"
+                "reference": "aa039f58a9737573627fdc1dfa3970fd93b0b330"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/onicial/bulmify/zipball/4d82365e3cbf75e6ff0340e755215ac4a28ef6b5",
-                "reference": "4d82365e3cbf75e6ff0340e755215ac4a28ef6b5",
+                "url": "https://api.github.com/repos/onicial/bulmify/zipball/aa039f58a9737573627fdc1dfa3970fd93b0b330",
+                "reference": "aa039f58a9737573627fdc1dfa3970fd93b0b330",
                 "shasum": ""
             },
             "require": {
@@ -1396,7 +1396,7 @@
                 "laravel",
                 "notifications"
             ],
-            "time": "2018-12-23T18:29:17+00:00"
+            "time": "2019-01-08T20:33:23+00:00"
         },
         {
             "name": "opis/closure",
