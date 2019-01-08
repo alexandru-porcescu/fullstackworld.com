@@ -2,14 +2,7 @@
     <div class="container">
 
         <div class="content has-text-centered">
-            <a class="has-text-primary" title="{{ route('home') }}" href="{{ route('home') }}">About</a>
-{{--
-           | <a class="has-text-primary"  title="{{ route('home') }}" href="{{ route('fhome') }}">{{ __('onicial.layouts.footer.privacy') }}</a>
---}}
-
-          {{--  | <a data-target="#myModal" class="has-text-primary modal-button" title="{{ __('onicial.layouts.footer.newsletter') }}">{{ __('onicial.layouts.footer.newsletter') }}</a>
-
---}}
+            <a class="has-text-primary" title="{{ route('about') }}" href="{{ route('about') }}">About</a>
 
         </div>
 

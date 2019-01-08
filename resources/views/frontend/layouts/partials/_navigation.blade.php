@@ -21,17 +21,20 @@
             </div>
 
             <div class="navbar-item">
-                <a href="{{ route('home') }}" title="About" class="navbar-item has-text-centered-touch">About</a>
+                <a href="{{ route('posts') }}" title="About" class="navbar-item has-text-centered-touch">Writings</a>
             </div>
 
+            <div class="navbar-item">
+                <a href="{{ route('about') }}" title="About" class="navbar-item has-text-centered-touch">About</a>
+            </div>
 
-                <div class="navbar-item has-text-centered">
-                    <a target="_blank" href="https://github.com/mhetreramesh" title="Github"
-                       class="button is-small is-light navbar-icon"><i class="fab fa-github"></i></a>
+            <div class="navbar-item has-text-centered">
+                <a target="_blank" href="https://github.com/mhetreramesh" title="Github"
+                   class="button is-small is-light navbar-icon"><i class="fab fa-github"></i></a>
 
-                    <a target="_blank" href="https://twitter.com/mhetreramesh" title="Twitter"
-                       class="button is-small is-light navbar-icon"><i class="fab fa-twitter"></i></a>
-                </div>
+                <a target="_blank" href="https://twitter.com/mhetreramesh" title="Twitter"
+                   class="button is-small is-light navbar-icon"><i class="fab fa-twitter"></i></a>
+            </div>
 
         </div>
 
