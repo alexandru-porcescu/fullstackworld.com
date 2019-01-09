@@ -7,62 +7,29 @@
         <div class="column is-12">
 
             <div class="content">
+                @foreach($posts as $post)
+                    <div class="short-post">
+                        <a href="{{route('post', $post->slug)}}"><h2 class="title is-3">{{$post->title}}</h2></a>
+                        <h4 class="subtitle is-5">{{$post->publish_date->diffForHumans()}}</h4>
 
-                <div class="short-post">
-                    <a href="{{route('post', 'sdsd')}}"><h2 class="title is-3">Welcome to blog post!</h2></a>
-                    <h4 class="subtitle is-5">2019.01.07</h4>
+                        <div>
+                            {!! $post->excerpt !!}
+                        </div>
 
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                        <p>
+                            <a href="{{route('post', $post->slug)}}" title="{{$post->title}}" class="is-pulled-right button is-outlined is-small">continue...</a>
+                        </p>
 
+                    </div>
+                @endforeach
 
-                    <p>
-                        <a target="_blank" href="#" title="" class="is-pulled-right button is-primary">more</a>
-                    </p>
-
-                </div>
-
-                <div class="short-post">
-                    <h2 class="title is-3">Welcome to blog post!</h2>
-                    <h4 class="subtitle is-5">2019.01.07</h4>
-
-
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-
-
-                    <p>
-                        <a target="_blank" href="#" title="" class="is-pulled-right button is-primary">more</a>
-                    </p>
-
-                </div>
-
-                <div class="short-post">
-                    <h2 class="title is-3">Welcome to blog post!</h2>
-                    <h4 class="subtitle is-5">2019.01.07</h4>
-
-
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-
-
-                    <p>
-                        <a target="_blank" href="#" title="" class="is-pulled-right button is-primary">more</a>
-                    </p>
-
+                <div class="">
+                    {!! $posts->links('pagination.default') !!}
                 </div>
 
             </div>
         </div>
 
     </div>
-
-
-
-
-
 
 @endsection

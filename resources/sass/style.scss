@@ -44,5 +44,12 @@ footer
   margin-bottom: 4rem!important;
   border-width: 0;
   border-bottom-width: 1px;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.navbar .navbar-brand img.logo {
+  max-height: 5rem;
+}
+
+section.bd-tws-home {
+  padding-top: 1em;
 }

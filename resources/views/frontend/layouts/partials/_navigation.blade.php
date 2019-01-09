@@ -2,7 +2,7 @@
 
     <div class="navbar-brand">
         <a href="/" class="navbar-item router-link-exact-active router-link-active">
-            <img src="http://ratenjoy.com/images/rate.png" alt="Fullstackworld" width="112" height="28"></a>
+            <img src="{{ asset('img/logo/main.png') }}" class="logo" alt="Fullstackworld"></a>
 
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -17,15 +17,15 @@
         <div class="navbar-end">
 
             <div class="navbar-item">
-                <a href="{{ route('home') }}" title="Home" class="navbar-item button is-primary is-fullwidt">Home</a>
+                <a href="{{ route('home') }}" title="Home" class="navbar-item {{ Route::is('home') ? 'button is-primary is-fullwidth' : '' }}">Home</a>
             </div>
 
             <div class="navbar-item">
-                <a href="{{ route('posts') }}" title="About" class="navbar-item has-text-centered-touch">Writings</a>
+                <a href="{{ route('posts') }}" title="About" class="navbar-item {{ Route::is('posts') ||  Route::is('post') ? 'button is-primary is-fullwidth' : '' }}">Writings</a>
             </div>
 
             <div class="navbar-item">
-                <a href="{{ route('about') }}" title="About" class="navbar-item has-text-centered-touch">About</a>
+                <a href="{{ route('about') }}" title="About" class="navbar-item {{ Route::is('about') ? 'button is-primary is-fullwidth' : '' }}">About</a>
             </div>
 
             <div class="navbar-item has-text-centered">
