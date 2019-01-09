@@ -7,7 +7,7 @@ return [
 
         'message' => 'Using cookies enables us to optimally design and continually improve our website. If you continue using the website, you automatically give your consent to receive cookies from it.',
 
-        'background-class' => 'is-dark',
+        'background-class' => 'is-primary',
         // is-success, is-warning, is-danger, is-primary, is-dark
 
         'container-classes' => 'is-one-third is-full-touch is-one-quarter-widescreen',
