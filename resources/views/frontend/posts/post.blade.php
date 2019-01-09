@@ -8,7 +8,7 @@
 
                     <div class="content">
 
-                        <div class="short-post">
+                        <p class="short-post">
                             <a href="#"><h2 class="title is-3">{{$post->title}}</h2></a>
                             <h4 class="subtitle is-5">{{$post->publish_date->diffForHumans()}}</h4>
 
@@ -16,11 +16,11 @@
                                 {!! $post->body !!}
                             </div>
 
-                            <p>
+                            <div class="tags">
                                 @foreach($post->tags as $tag)
-                                    <a href="#" title="" class="button is-primary">{{$tag->name}}</a>
+                                    <span class="tag is-primary is-large">{{$tag->name}}</span>
                                 @endforeach
-                            </p>
+                            </div>
 
                         </div>
 
