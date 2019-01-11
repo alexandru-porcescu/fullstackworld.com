@@ -16,12 +16,13 @@
 
                         <div class="tags">
                             @foreach($post->tags as $tag)
-                                <span class="tag is-primary is-large">{{$tag->name}}</span>
+                                @if($tag->name != 'Journal')
+                                    <span class="tag is-primary is-large">{{$tag->name}}</span>
+                                @endif
                             @endforeach
                         </div>
 
                     </div>
-
 
                 </div>
             </div>

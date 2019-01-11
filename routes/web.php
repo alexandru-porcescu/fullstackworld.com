@@ -17,4 +17,6 @@ Route::get('/about', 'AboutController@index')->name('about');
 
 Route::get('/posts', 'PostsController@index')->name('posts');
 
+Route::get('/journal', 'PostsController@index')->name('journal');
+
 Route::get('/post/{slug}', 'PostsController@post')->name('post');

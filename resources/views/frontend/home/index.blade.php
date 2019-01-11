@@ -22,6 +22,10 @@
 
                             </div>
                         @endforeach
+
+                        <div class="">
+                            {!! $posts->links('pagination.default') !!}
+                        </div>
                     </div>
                 </div>
 
