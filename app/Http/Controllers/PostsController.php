@@ -24,6 +24,7 @@ class PostsController extends Controller
             ->live()
             ->where('slug', $slug)
             ->first();
-        return view('frontend.posts.post', compact('post'));
+        $postType = $post->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
+        return view('frontend.posts.post', compact('post', 'postType'));
     }
 }
