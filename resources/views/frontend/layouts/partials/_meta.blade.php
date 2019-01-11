@@ -1,5 +1,6 @@
+<title>Full Stack World</title>
 @if(!empty($page))
-    <title>{{ $page->title }} - {{ config('app.name') }}</title>
+    <title>Page Title | Full Stack World</title>
     <meta name="description" content="{{ $page->description }}" />
     <meta name="keywords" content="{{ $page->keywords }}" />
 
