@@ -13,7 +13,8 @@
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
         "onicial/bulmify": "^1.0",
-        "writingink/wink": "^0.0.7"
+        "writingink/wink": "^0.0.7",
+        "league/flysystem-aws-s3-v3": "~1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
