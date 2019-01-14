@@ -9,8 +9,8 @@ class PostsController extends Controller
     function index()
     {
         $posts = WinkPost::whereHas('tags', function ($query) {
-                $query->where('name', 'Journal');
-            })
+            $query->where('name', 'Journal');
+        })
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(10);

@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "bulma": "^0.7.2",
+        "highlight.js": "^9.13.1",
         "normalize.css": "^8.0.1"
     }
 }
