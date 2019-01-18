@@ -9,7 +9,7 @@
             <div class="content">
                 @foreach($posts as $post)
                     <div class="short-post">
-                        <a href="{{route('post', $post->slug)}}"><h2 class="title is-3 has-text-primary">{{$post->title}}</h2></a>
+                        <a href="{{route('post', $post->slug)}}"><h2 class="title is-3">{{$post->title}}</h2></a>
                         <h4 class="subtitle is-6">{{$post->publish_date->diffForHumans()}}</h4>
 
                         <div>
