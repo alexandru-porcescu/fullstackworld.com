@@ -17,7 +17,7 @@
                         </div>
 
                         <p>
-                            <a target="_blank" href="#" title="" class="is-pulled-right button is-outlined is-small">continue...</a>
+                            <a href="{{route('post', $post->slug)}}" title="{{$post->title}}" class="is-pulled-right button is-outlined is-small">continue...</a>
                         </p>
 
                     </div>
