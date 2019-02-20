@@ -81,7 +81,9 @@ h2.title:hover, h2.title:focus {
   color: #79689B;
 }
 .embedded_image {
-  border: 2px solid #79689B;
+  img {
+    border: 2px solid #79689B;
+  }
   p {
     text-align: center;
   }
