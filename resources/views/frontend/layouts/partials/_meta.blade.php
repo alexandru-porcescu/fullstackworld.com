@@ -1,10 +1,7 @@
-<title>Full Stack World</title>
 @if(!empty($page))
     <title>Page Title | Full Stack World</title>
     <meta name="description" content="{{ $page->description }}" />
     <meta name="keywords" content="{{ $page->keywords }}" />
-
-    <meta name="robots" content="index,follow" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $page->title }}" />
@@ -19,8 +16,29 @@
     <meta name="twitter:title" content="{{ $page->title }}" />
     <meta name="twitter:description" content="{{ $page->description }}" />
     <meta name="twitter:image" content={{ asset('img/meta.jpg') }} />
+@elseif(!empty($selectedPost))
+    <title>{{$selectedPost->title}} | Full Stack World</title>
+    <meta name="description" content="{{ $selectedPost->meta['meta_description'] }}" />
+    <meta name="keywords" content="{{ $selectedPost->meta['opengraph_title'] }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ $selectedPost->meta['opengraph_title'] }}" />
+    <meta property="og:description" content="{{ $selectedPost->meta['opengraph_description'] }}" />
+    <meta property="og:site_name" content="FullStackWorld" />
+    <meta property="og:url" content="{{ request()->url() }}" />
+    <meta property="og:image" content="{{ $selectedPost->meta['opengraph_image'] }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mhetreramesh" />
+    <meta name="twitter:creator" content="@mhetreramesh" />
+    <meta name="twitter:title" content="{{ $selectedPost->meta['twitter_title'] }}" />
+    <meta name="twitter:description" content="{{ $selectedPost->meta['twitter_description'] }}" />
+    <meta name="twitter:image" content={{ $selectedPost->meta['twitter_image'] }} />
+@else
+    <title>Full Stack World</title>
 @endif
 
+<meta name="robots" content="index,follow" />
 
 <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('img/favicons/apple-icon-57x57.png') }}" />
 <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('img/favicons/apple-icon-60x60.png') }}" />

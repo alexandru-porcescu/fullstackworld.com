@@ -7,15 +7,15 @@
             <div class="column is-12">
 
                 <div class="content">
-                        <h1 class="title is-3">{{$post->title}}</h1>
-                        <h4 class="subtitle is-5">{{$post->publish_date->diffForHumans()}}</h4>
+                        <h1 class="title is-3">{{$selectedPost->title}}</h1>
+                        <h4 class="subtitle is-5">{{$selectedPost->publish_date->diffForHumans()}}</h4>
 
                         <div>
-                            {!! $post->body !!}
+                            {!! $selectedPost->body !!}
                         </div>
 
                         <div class="tags">
-                            @foreach($post->tags as $tag)
+                            @foreach($selectedPost->tags as $tag)
                                 @if($tag->name != 'Journal')
                                     <span class="tag is-primary is-large">{{$tag->name}}</span>
                                 @endif
