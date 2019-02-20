@@ -17,11 +17,11 @@
         <div class="navbar-end">
 
             <div class="navbar-item">
-                <a href="{{ route('home') }}" title="Home" class="navbar-item {{ Route::is('home') ? 'button is-primary is-fullwidth' : '' }}">Home</a>
+                <a href="{{ route('home') }}" title="Blog" class="navbar-item {{ Route::is('home') || (isset($postType) && $postType == 'Post') ? 'button is-primary is-fullwidth' : '' }}">Blog</a>
             </div>
 
             <div class="navbar-item">
-                <a href="{{ route('posts') }}" title="About" class="navbar-item {{ Route::is('posts') ||  Route::is('post') ? 'button is-primary is-fullwidth' : '' }}">Writings</a>
+                <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Journal</a>
             </div>
 
             <div class="navbar-item">

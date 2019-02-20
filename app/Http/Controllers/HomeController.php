@@ -9,9 +9,12 @@ class HomeController extends Controller
     function index()
     {
         $posts = WinkPost::with('tags')
+            ->whereHas('tags', function ($query) {
+                $query->where('name', '!=', 'Journal');
+            })
             ->live()
             ->orderBy('publish_date', 'DESC')
-            ->simplePaginate(5);
+            ->simplePaginate(10);
 
         return view('frontend.home.index', compact('posts'));
     }
