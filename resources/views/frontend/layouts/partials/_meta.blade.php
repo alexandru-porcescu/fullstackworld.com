@@ -28,7 +28,7 @@
     <meta property="og:url" content="{{ request()->url() }}" />
     <meta property="og:image" content="{{ $selectedPost->meta['opengraph_image'] }}" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mhetreramesh" />
     <meta name="twitter:creator" content="@mhetreramesh" />
     <meta name="twitter:title" content="{{ $selectedPost->meta['twitter_title'] }}" />
