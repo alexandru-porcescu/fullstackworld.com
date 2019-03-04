@@ -59,8 +59,8 @@ section.bd-tws-home {
 .tags {
   padding-top: 2em;
 }
-
-.video-container {
+.inline_html {
+  text-align: center;
   position: relative;
   padding-bottom: 56.25%; /*16:9*/
   padding-top: 30px;
@@ -68,9 +68,9 @@ section.bd-tws-home {
   overflow: hidden;
 }
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.inline_html iframe,
+.inline_html object,
+.inline_html embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -79,4 +79,12 @@ section.bd-tws-home {
 }
 h2.title:hover, h2.title:focus {
   color: #79689B;
+}
+.embedded_image {
+  img {
+    border: 2px solid #79689B;
+  }
+  p {
+    text-align: center;
+  }
 }

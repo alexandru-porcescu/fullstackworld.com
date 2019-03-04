@@ -20,11 +20,14 @@ class PostsController extends Controller
 
     function post($slug)
     {
-        $post = WinkPost::with('tags')
+        $selectedPost = WinkPost::with('tags')
             ->live()
             ->where('slug', $slug)
             ->first();
-        $postType = $post->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
-        return view('frontend.posts.post', compact('post', 'postType'));
+        if (!$selectedPost) {
+            return abort(404);
+        }
+        $postType = $selectedPost->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
+        return view('frontend.posts.post', compact('selectedPost', 'postType'));
     }
 }
