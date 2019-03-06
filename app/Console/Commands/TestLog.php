@@ -18,6 +18,8 @@ class TestLog extends Command
 
     public function handle()
     {
+        app('sentry')->captureMessage('bbbb');
+
         Log::alert('Sent alert message on '. date('yyyy-mm-dd h:i:s'));
 
         $this->info('Sync successfully finished!');
