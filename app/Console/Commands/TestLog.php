@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Log;
 
 class TestLog extends Command
 {
@@ -18,9 +17,7 @@ class TestLog extends Command
 
     public function handle()
     {
-        app('sentry')->captureMessage('bbbb');
-
-        Log::alert('Sent alert message on '. date('yyyy-mm-dd h:i:s'));
+        app('sentry')->captureMessage('Cron test run on '. date('Y-m-d h:i:s'));
 
         $this->info('Sync successfully finished!');
     }
