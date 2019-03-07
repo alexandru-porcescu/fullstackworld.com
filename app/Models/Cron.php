@@ -1,6 +1,10 @@
 <?php
 namespace App\Models;
 
+/*
+ * This is class is a workaround to run cron jobs on heroku
+ * Ref: https://medium.com/@nicolasbistolfi/running-laravel-scheduled-jobs-on-heroku-3a7bd6fa2481
+ */
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
