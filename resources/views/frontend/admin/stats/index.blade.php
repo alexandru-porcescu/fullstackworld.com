@@ -50,13 +50,59 @@
                 </div>
             </div>
 
+
+            <div class="content">
+                <div id="ga_last_30_days"></div>
+            </div>
+
             <div class="content">
                 <div id="ga_stats"></div>
             </div>
 
             <div class="content">
-                <div id="ga_last_30_days"></div>
+                <h2 class="title text-center">Top Pages</h2>
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th>Page</th>
+                            <th>Page Views</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($stats['gaMostVisitedPages'] as $gaPage)
+                        <tr>
+                            <td>
+                                <code>{{$gaPage['url']}}</code>
+                            </td>
+                            <td>{{$gaPage['pageViews']}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
+
+            <div class="content">
+                <h2 class="title text-center">Top References</h2>
+                <table class="table is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Page Views</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($stats['gaTopReferences'] as $reference)
+                        <tr>
+                            <td>
+                                <code>{{$reference['url']}}</code>
+                            </td>
+                            <td>{{$reference['pageViews']}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
         </div>
 
     </div>

@@ -30,11 +30,17 @@ class StatsController extends Controller
             ]
         );
 
+        $gaMostVisitedPages = Analytics::fetchMostVisitedPages(Period::months(6), 20);
+
+        $gaTopReferences = Analytics::fetchTopReferrers(Period::months(6), 20);
+
         $stats = [
             'postCount' => $livePost,
             'analytics' => $analyticsData->rows,
             'gaLastOneMonth' => $gaLastOneMonth,
-            'gaCurrentMonth' => last($analyticsData->rows)
+            'gaCurrentMonth' => last($analyticsData->rows),
+            'gaMostVisitedPages' => $gaMostVisitedPages,
+            'gaTopReferences' => $gaTopReferences,
         ];
 
         return view('frontend.admin.stats.index', compact('stats'));
