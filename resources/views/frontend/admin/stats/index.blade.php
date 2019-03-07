@@ -29,7 +29,7 @@
                                 <p class="title">{{$stats['gaCurrentMonth']['3']}}
                                 </p>
                                 <p class="subtitle">
-                                    Visitors (This month)
+                                    Visitors <small>(This month)</small>
                                 </p>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 <p class="title">{{$stats['gaCurrentMonth']['2']}}
                                 </p>
                                 <p class="subtitle">
-                                    Page views (This month)
+                                    Page views <small>(This month)</small>
                                 </p>
                             </div>
                         </div>
