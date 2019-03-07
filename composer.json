@@ -15,6 +15,7 @@
         "league/flysystem-aws-s3-v3": "~1.0",
         "onicial/bulmify": "^1.0",
         "sentry/sentry-laravel": "1.0.0",
+        "spatie/laravel-analytics": "^3.6",
         "writingink/wink": "*"
     },
     "require-dev": {

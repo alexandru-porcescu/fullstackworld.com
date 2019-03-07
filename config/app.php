@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         \Sentry\Laravel\ServiceProvider::class,
+        \Spatie\Analytics\AnalyticsServiceProvider::class,
 
     ],
 

@@ -4,6 +4,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="{{ asset('js/moment.js') }}"></script>
 
     <div class="columns is-centered">
 
@@ -25,10 +26,10 @@
                     <div class="column is-4">
                         <div class="card">
                             <div class="card-content">
-                                <p class="title">120
+                                <p class="title">{{$stats['gaCurrentMonth']['3']}}
                                 </p>
                                 <p class="subtitle">
-                                    Visitors Last (Past 30 days)
+                                    Visitors (This month)
                                 </p>
                             </div>
                         </div>
@@ -37,10 +38,10 @@
                     <div class="column is-4">
                         <div class="card">
                             <div class="card-content">
-                                <p class="title">1200
+                                <p class="title">{{$stats['gaCurrentMonth']['2']}}
                                 </p>
                                 <p class="subtitle">
-                                    Page views (Past 30 days)
+                                    Page views (This month)
                                 </p>
                             </div>
                         </div>
@@ -50,212 +51,115 @@
             </div>
 
             <div class="content">
-                <div id="ga_total_visitors" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                <div id="ga_stats"></div>
             </div>
 
             <div class="content">
-
-                <div id="ga_total_pageviews" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-            </div>
-
-            <div class="content">
-
-                <div id="total_blogpost" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
+                <div id="ga_last_30_days"></div>
             </div>
         </div>
 
     </div>
 
     <script>
+        let rawAnalytics = {!! json_encode($stats['analytics']) !!}
 
-        var data = [
-            [
-                1167609600000,
-                0.7537
-            ],
-            [
-                1167696000000,
-                0.7537
-            ],
-            [
-                1167782400000,
-                0.7559
-            ],
-            [
-                1167868800000,
-                0.7631
-            ]
-        ];
+        let gaUsers = [], gaSessions = [], gaPageViews = []
 
-
-
-        Highcharts.chart('ga_total_visitors', {
-            chart: {
-                zoomType: 'x'
-            },
-            title: {
-                text: 'USD to EUR exchange rate over time'
-            },
-            subtitle: {
-                text: document.ontouchstart === undefined ?
-                    'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-            },
-            xAxis: {
-                type: 'datetime'
-            },
-            yAxis: {
-                title: {
-                    text: 'Exchange rate'
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            plotOptions: {
-                area: {
-                    fillColor: {
-                        linearGradient: {
-                            x1: 0,
-                            y1: 0,
-                            x2: 0,
-                            y2: 1
-                        },
-                        stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                        ]
-                    },
-                    marker: {
-                        radius: 2
-                    },
-                    lineWidth: 1,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    threshold: null
-                }
-            },
-
-            series: [{
-                type: 'area',
-                name: 'USD to EUR',
-                data: data
-            }]
+        rawAnalytics.forEach(function(element) {
+            let date = element[0]
+            date = date.slice(0, -2) +"-"+date.slice(-2)+"-01";
+            gaUsers.push([moment(date).valueOf(), parseInt(element[1])])
+            gaPageViews.push([moment(date).valueOf(), parseInt(element[2])])
+            gaSessions.push([moment(date).valueOf(), parseInt(element[3])])
         });
 
-        Highcharts.chart('ga_total_pageviews', {
-            chart: {
-                zoomType: 'x'
-            },
+        Highcharts.chart('ga_stats', {
+
             title: {
-                text: 'USD to EUR exchange rate over time'
+                text: 'Google analytics report for last 12 month'
             },
-            subtitle: {
-                text: document.ontouchstart === undefined ?
-                    'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+
+            yAxis: {
+                title: {
+                    text: 'Website Visitors'
+                }
             },
+
             xAxis: {
                 type: 'datetime'
             },
-            yAxis: {
-                title: {
-                    text: 'Exchange rate'
-                }
-            },
-            legend: {
-                enabled: false
-            },
+
             plotOptions: {
-                area: {
-                    fillColor: {
-                        linearGradient: {
-                            x1: 0,
-                            y1: 0,
-                            x2: 0,
-                            y2: 1
-                        },
-                        stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                        ]
+                series: {
+                    label: {
+                        connectorAllowed: false
                     },
-                    marker: {
-                        radius: 2
-                    },
-                    lineWidth: 1,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    threshold: null
                 }
             },
 
             series: [{
+                name: 'Page Views',
                 type: 'area',
-                name: 'USD to EUR',
-                data: data
-            }]
+                data: gaPageViews
+            },{
+                name: 'Users',
+                data: gaUsers
+            },{
+                name: 'Session',
+                data: gaSessions
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
         });
 
-        Highcharts.chart('total_blogpost', {
+
+        rawAnalytics = {!! json_encode($stats['gaLastOneMonth']) !!}
+        gaPageViews = [], gaUsers = []
+        rawAnalytics.forEach(function(element) {
+            gaPageViews.push([moment(element.date.date.split(" ")[0]).valueOf(), parseInt(element.pageViews)])
+            gaUsers.push([moment(element.date.date.split(" ")[0]).valueOf(), parseInt(element.visitors)])
+        });
+
+        Highcharts.chart('ga_last_30_days', {
             chart: {
                 zoomType: 'x'
             },
             title: {
-                text: 'USD to EUR exchange rate over time'
-            },
-            subtitle: {
-                text: document.ontouchstart === undefined ?
-                    'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+                text: 'Google analytics for last 30 days'
             },
             xAxis: {
                 type: 'datetime'
             },
             yAxis: {
                 title: {
-                    text: 'Exchange rate'
+                    text: 'Website Visitors'
                 }
             },
             legend: {
                 enabled: false
             },
-            plotOptions: {
-                area: {
-                    fillColor: {
-                        linearGradient: {
-                            x1: 0,
-                            y1: 0,
-                            x2: 0,
-                            y2: 1
-                        },
-                        stops: [
-                            [0, Highcharts.getOptions().colors[0]],
-                            [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                        ]
-                    },
-                    marker: {
-                        radius: 2
-                    },
-                    lineWidth: 1,
-                    states: {
-                        hover: {
-                            lineWidth: 1
-                        }
-                    },
-                    threshold: null
-                }
-            },
 
             series: [{
                 type: 'area',
-                name: 'USD to EUR',
-                data: data
+                name: 'Page Views',
+                data: gaPageViews
+            },{
+                name: 'Visitors',
+                data: gaUsers
             }]
         });
     </script>
