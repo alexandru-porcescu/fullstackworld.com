@@ -5,9 +5,10 @@ namespace App\Models;
  * This is class is a workaround to run cron jobs on heroku
  * Ref: https://medium.com/@nicolasbistolfi/running-laravel-scheduled-jobs-on-heroku-3a7bd6fa2481
  */
+
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Cron extends Model
 {
     protected $primaryKey = 'command';
@@ -20,7 +21,8 @@ class Cron extends Model
 
     protected $fillable = ['command', 'next_run', 'last_run'];
 
-    public static function shouldIRun($command, $minutes) {
+    public static function shouldIRun($command, $minutes)
+    {
         $cron = Cron::find($command);
         $now  = Carbon::now();
 
