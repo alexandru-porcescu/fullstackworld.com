@@ -30,9 +30,9 @@ class StatsController extends Controller
             ]
         );
 
-        $gaMostVisitedPages = Analytics::fetchMostVisitedPages(Period::months(6), 20);
+        $gaMostVisitedPages = Analytics::fetchMostVisitedPages(Period::months(3), 20);
 
-        $gaTopReferences = Analytics::fetchTopReferrers(Period::months(6), 20);
+        $gaTopReferences = Analytics::fetchTopReferrers(Period::months(3), 20);
 
         $stats = [
             'postCount' => $livePost,
