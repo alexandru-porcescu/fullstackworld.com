@@ -60,7 +60,7 @@
             </div>
 
             <div class="content">
-                <h2 class="title text-center">Top Pages</h2>
+                <h2 class="title text-center">Top Pages(3 Months)</h2>
                 <table class="table is-fullwidth">
                     <thead>
                         <tr>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="content">
-                <h2 class="title text-center">Top References</h2>
+                <h2 class="title text-center">Top References(3 Months)</h2>
                 <table class="table is-fullwidth">
                     <thead>
                     <tr>
