@@ -123,7 +123,7 @@
         Highcharts.chart('ga_stats', {
 
             title: {
-                text: 'Google analytics report for last 12 month'
+                text: 'Google analytics(Last 12 month)'
             },
 
             yAxis: {
@@ -185,7 +185,7 @@
                 zoomType: 'x'
             },
             title: {
-                text: 'Google analytics for last 30 days'
+                text: 'Google analytics(Last 30 days)'
             },
             xAxis: {
                 type: 'datetime'
