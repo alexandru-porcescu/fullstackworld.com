@@ -60,7 +60,7 @@
             </div>
 
             <div class="content">
-                <h2 class="title text-center">Top Pages</h2>
+                <h2 class="title text-center">Top Pages(3 Months)</h2>
                 <table class="table is-fullwidth">
                     <thead>
                         <tr>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="content">
-                <h2 class="title text-center">Top References</h2>
+                <h2 class="title text-center">Top References(3 Months)</h2>
                 <table class="table is-fullwidth">
                     <thead>
                     <tr>
@@ -123,7 +123,7 @@
         Highcharts.chart('ga_stats', {
 
             title: {
-                text: 'Google analytics report for last 12 month'
+                text: 'Google analytics(Last 12 month)'
             },
 
             yAxis: {
@@ -185,7 +185,7 @@
                 zoomType: 'x'
             },
             title: {
-                text: 'Google analytics for last 30 days'
+                text: 'Google analytics(Last 30 days)'
             },
             xAxis: {
                 type: 'datetime'
