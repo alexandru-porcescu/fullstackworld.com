@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
     {
         // ToDo: Clean custom logic when we move from heroku
         $schedule->command('test:log')->everyMinute()->when(function() {
-            return Cron::shouldIRun('command:test', 1);
+            return Cron::shouldIRun('test:log', 1);
         });
     }
 

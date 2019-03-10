@@ -24,10 +24,21 @@ class PostsController extends Controller
             ->live()
             ->where('slug', $slug)
             ->first();
+
         if (!$selectedPost) {
             return abort(404);
         }
+
         $postType = $selectedPost->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
-        return view('frontend.posts.post', compact('selectedPost', 'postType'));
+        $tags = $selectedPost->tags->pluck('name')->toArray();
+
+        $similarPosts = WinkPost::whereHas('tags', function ($query) use($tags) {
+                $query->whereIn('name', $tags);
+            })
+            ->live()
+            ->orderBy('publish_date', 'DESC')
+            ->limit(3)->get();
+
+        return view('frontend.posts.post', compact('selectedPost', 'postType', 'similarPosts'));
     }
 }
