@@ -4,7 +4,7 @@
 
         <div class="columns is-centered">
 
-            <div class="column is-14">
+            <div class="column is-12">
 
                 <div class="content">
                     <h1 class="title is-3">{{$selectedPost->title}}</h1>
