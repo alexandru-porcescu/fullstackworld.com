@@ -7,7 +7,7 @@
                 </figure>
             </div>
             <div class="media-content">
-                <p class="title is-4">{{$selectedPost->author->name}}</p>
+                <h3 class="title is-4">{{$selectedPost->author->name}}</h3>
                 <p class="subtitle is-6">{{'@'.$selectedPost->author->slug}}</p>
             </div>
         </div>
