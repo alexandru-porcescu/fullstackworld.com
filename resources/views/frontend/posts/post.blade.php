@@ -26,6 +26,9 @@
             </div>
         </div>
 
+
+        @include('frontend.posts.author')
+
         @include('frontend.posts.similar-posts')
 
 @endsection

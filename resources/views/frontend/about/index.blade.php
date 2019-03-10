@@ -9,12 +9,9 @@
             <div class="content">
 
                 <div class="short-post">
-                    <a href="#"><h2 class="title is-3">Ramesh Mhetre</h2></a>
-                    <h4 class="subtitle is-5">Favorite Mantra - <b>Less is more!</b></h4>
+                    <h1 class="title">FullStackWorld = Technology + Life + Memories</h1>
 
-                    <p>
-                        I love ❤ building things, sometimes they work. I read books when I've nothing to do. I'm currently working with Tradebyte a Zalando Company.
-                    </p>
+                    <p>This is the platform where like minded people write about what is going on in their life & technology where we contribute to.</p>
 
                 </div>
 
