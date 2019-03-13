@@ -24,18 +24,22 @@
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Journal</a>
+                    <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Laravel</a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('about') }}" title="About" class="navbar-item {{ Route::is('about') ? 'button is-primary is-fullwidth' : '' }}">About</a>
+                    <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Vue.js</a>
+                </div>
+
+                <div class="navbar-item">
+                    <a href="{{ route('about') }}" title="About" class="navbar-item {{ Route::is('about') ? 'button is-primary is-fullwidth' : '' }}">Angular</a>
                 </div>
 
                 <div class="navbar-item has-text-centered">
-                    <a target="_blank" href="https://github.com/mhetreramesh" title="Github"
+                    <a target="_blank" href="https://github.com/gliterd" title="Github"
                     class="button is-small is-light navbar-icon"><i class="fab fa-github"></i></a>
 
-                    <a target="_blank" href="https://twitter.com/mhetreramesh" title="Twitter"
+                    <a target="_blank" href="https://twitter.com/fullstack_world" title="Twitter"
                     class="button is-small is-light navbar-icon"><i class="fab fa-twitter"></i></a>
                 </div>
 
