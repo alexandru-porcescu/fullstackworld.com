@@ -11,28 +11,16 @@
 
 </head>
 <body>
+    @include('frontend.layouts.partials._navigation')
 
-<section class="bd-tws-home section">
-
-        <div class="columns is-centered main-nav">
-
-            <div class="column is-9">
-                @include('frontend.layouts.partials._navigation')
-
-            </div>
-
+    <section class="bd-tws-home section">
+        <div class="container is-fluid">
+            @yield('content')
         </div>
-    <div class="container">
-
-        @yield('content')
-
-    </div>
+    </section>
     @include('frontend.layouts.partials._footer')
 
-
-</section>
-
-@include('frontend.layouts.partials._scripts')
+    @include('frontend.layouts.partials._scripts')
 
 </body>
 </html>
