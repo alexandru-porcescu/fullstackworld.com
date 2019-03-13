@@ -8,7 +8,7 @@
                 <div class="card">
                     @if($selectedPost->featured_image)
                     <div class="card-image">
-                        <figure class="image is-3by1">
+                        <figure class="image is-2by1">
                             <img src="{{$selectedPost->featured_image}}" alt="{{$selectedPost->title}}">
                         </figure>
                     </div>
