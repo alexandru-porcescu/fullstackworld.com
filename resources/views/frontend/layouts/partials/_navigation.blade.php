@@ -20,19 +20,19 @@
             <div class="navbar-end">
 
                 <div class="navbar-item">
-                    <a href="{{ route('home') }}" title="Blog" class="navbar-item {{ Route::is('home') || (isset($postType) && $postType == 'Post') ? 'button is-primary is-fullwidth' : '' }}">Blog</a>
+                    <a href="{{ route('tags', ['slug' => 'laravel']) }}" title="Laravel" class="navbar-item {{ Route::is('tags') && Request::is(['laravel', 'laravel-news', 'laravel-packages']) ? 'button is-primary is-fullwidth' : '' }}">Laravel</a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Laravel</a>
+                    <a href="{{ route('tags', ['slug' => 'vuejs']) }}" title="Vue.js" class="navbar-item {{ Route::is('tags') && Request::is(['vuejs', 'vuejs-news', 'vuejs-packages']) ? 'button is-primary is-fullwidth' : '' }}">Vue.js</a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('journal') }}" title="Journal" class="navbar-item {{ Route::is('journal') || (isset($postType) && $postType == 'Journal') ? 'button is-primary is-fullwidth' : '' }}">Vue.js</a>
+                    <a href="{{ route('tags', ['slug' => 'angular']) }}" title="Angular" class="navbar-item {{ Route::is('tags') && Request::is(['angular', 'angular-news', 'angular-packages']) ? 'button is-primary is-fullwidth' : '' }}">Angular</a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('about') }}" title="About" class="navbar-item {{ Route::is('about') ? 'button is-primary is-fullwidth' : '' }}">Angular</a>
+                    <a href="{{ route('blog') }}" title="Blog" class="navbar-item {{ Route::is('blog') ? 'button is-primary is-fullwidth' : '' }}">Blog</a>
                 </div>
 
                 <div class="navbar-item has-text-centered">

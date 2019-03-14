@@ -36,7 +36,9 @@
                 <br>
                 @include('frontend.posts.similar-posts')
             </div>
-            <div class="column is-3"></div>
+            <div class="column is-3">
+                @include('frontend.layouts.right-side.tags')
+            </div>
         </div>
 
 

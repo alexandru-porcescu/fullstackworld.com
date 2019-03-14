@@ -2,22 +2,19 @@
 
 @section('content')
 
-    <div class="columns is-centered">
+    <div class="columns is-desktop is-multiline">
+        @foreach($posts as $post)
+            <div class="column is-one-third">
 
-        <div class="column is-8">
-
-                @foreach($posts as $post)
                 <div class="short-post">
                     <div class="card">
-                        @if($post->featured_image)
                         <a href="{{route('post', $post->slug)}}">
                             <div class="card-image">
                                 <figure class="image is-2by1">
-                                <img src="{{$post->featured_image}}" alt="{{$post->title}}">
+                                <img src="{{$post->featured_image ? $post->featured_image : asset('img/placeholder.png')}}" alt="{{$post->title}}">
                                 </figure>
                             </div>
                         </a>
-                        @endif
                         <div class="card-content">
                             <div class="media">
                             
@@ -30,18 +27,15 @@
                             <div class="content">
                             {!! $post->excerpt !!}
                             </div>
-                            <a href="{{route('post', $post->slug)}}"><small>Read more...</small></a>
+                            <a href="{{route('post', $post->slug)}}" class="footer-link"><small>Read more...</small></a>
                         </div>
                     </div>
-                </div>
                     
-                @endforeach
-
-                <div class="">
-                    {!! $posts->links('pagination.default') !!}
                 </div>
-        </div>
-        <div class="column is-4"></div>
+            </div>
+                
+        @endforeach
+
 
     </div>
 

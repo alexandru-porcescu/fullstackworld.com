@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Wink\WinkTag;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('frontend.layouts.right-side.tags', function ($view) {
+            $tags = WinkTag::withCount('posts')->orderBy('name', 'DESC')->get();
+            $view->with('tags', $tags);
+        });
     }
 
     /**

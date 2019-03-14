@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Wink\WinkPost;
 
-class HomeController extends Controller
+class BlogController extends Controller
 {
     function index()
     {
@@ -13,6 +13,6 @@ class HomeController extends Controller
             ->orderBy('publish_date', 'DESC')
             ->simplePaginate(10);
 
-        return view('frontend.home.index', compact('posts'));
+        return view('frontend.blog.index', compact('posts'));
     }
 }
