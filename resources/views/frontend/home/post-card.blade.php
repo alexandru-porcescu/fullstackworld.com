@@ -12,7 +12,7 @@
                 <div class="media">
                 
                     <div class="media-content">
-                        <h2 class="title is-4"><a href="{{route('post', $post->slug)}}">{{$post->title}}</a></h2>
+                        <h3 class="title is-4"><a href="{{route('post', $post->slug)}}">{{$post->title}}</a></h3>
                         <p class="subtitle is-5"><time datetime="{{$post->publish_date}}"> {{$post->publish_date->format('M d, Y')}}</time></p>
                     </div>
                 </div>
