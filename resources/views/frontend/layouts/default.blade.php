@@ -14,7 +14,7 @@
     @include('frontend.layouts.partials._navigation')
 
     <section class="bd-tws-home section">
-        <div class="container is-fluid">
+        <div class="container is-widescren">
             @yield('content')
         </div>
     </section>

@@ -2,6 +2,18 @@ body {
   font-size: 1.2rem;
   background-color: #f5f5f5;
 }
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1152px;
+    width: 1152px;
+  }
+}
+@media screen and (min-width: 1472px) {
+  .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
+}
 .navbar
 {
   background-color: transparent;

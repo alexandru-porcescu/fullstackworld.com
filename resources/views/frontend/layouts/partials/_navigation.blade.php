@@ -1,5 +1,5 @@
 <div class="main-nav">
-    <div class="container is-fluid">
+    <div class="container is-widescren">
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
 
