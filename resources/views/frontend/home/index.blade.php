@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="title-box">
-        <h1 class="title is-2 is-inline">Whats new in Laravel</h1>
+        <h1 class="title is-2 is-inline top-marginless">Whats new in Laravel</h1>
         <a href="{{ route('tags', ['slug' => 'laravel']) }}" title="{{ route('tags', ['slug' => 'laravel']) }}"><small class="is-pulled-right">View All</small></a>
     </div>
     <div class="columns is-multiline">

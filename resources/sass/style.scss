@@ -62,7 +62,11 @@ footer
     position:absolute;
   }
 }
-
+.short-post-card {
+  .card {
+    min-height: 18em;
+  }
+}
 .main-nav {
   border-color: #e9ecef;
   border-style: solid;
@@ -86,7 +90,7 @@ footer
   }
 }
 section.bd-tws-home {
-  padding-top: 1em;
+  padding-top: 0;
 }
 
 .tags {
@@ -135,4 +139,7 @@ footer {
       padding-right: 1rem;
     }
   }
+}
+.top-marginless {
+  margin-top: 0;
 }

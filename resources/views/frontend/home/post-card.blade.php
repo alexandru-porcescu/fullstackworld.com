@@ -1,6 +1,5 @@
 <div class="column is-one-third">
-
-    <div class="short-post">
+    <div class="short-post-card">
         <div class="card">
             <a href="{{route('post', $post->slug)}}">
                 <div class="card-image">
@@ -14,14 +13,10 @@
                 
                     <div class="media-content">
                         <h2 class="title is-4"><a href="{{route('post', $post->slug)}}">{{$post->title}}</a></h2>
-                        <p class="subtitle is-6"><a>{{$post->author->name}}</a> / <time datetime="2016-1-1">{{$post->publish_date->diffForHumans()}}</time></p>
+                        <p class="subtitle is-5"><time datetime="{{$post->publish_date}}"> {{$post->publish_date->format('M d, Y')}}</time></p>
                     </div>
                 </div>
 
-                <div class="content">
-                {!! $post->excerpt !!}
-                </div>
-                <a href="{{route('post', $post->slug)}}" class="footer-link"><small>Read more...</small></a>
             </div>
         </div>
         
