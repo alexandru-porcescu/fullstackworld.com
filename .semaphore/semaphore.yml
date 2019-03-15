@@ -29,6 +29,7 @@ blocks:
       jobs:
         - name: composer
           commands:
+            - phpbrew ext install iconv
             # Checkout code from Git repository. This step is mandatory if the
             # job is to work with your code.
             # Optionally you may use --use-cache flag to avoid roundtrip to
