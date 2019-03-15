@@ -35,7 +35,7 @@ blocks:
             # Optionally you may use --use-cache flag to avoid roundtrip to
             # remote repository.
             # See https://docs.semaphoreci.com/article/54-toolbox-reference#libcheckout
-            - checkout
+            - checkout --use-cache
             # Try and find a cached version of our /vendor dependencies folder.
             # Semaphore tries to find a partial match.
             # Read about caching: https://docs.semaphoreci.com/article/54-toolbox-reference#cache
@@ -61,7 +61,7 @@ blocks:
     task:
       prologue:
         commands:
-          - checkout
+          - checkout --use-cache
           - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
       jobs:
         #- name: phpcs
@@ -79,8 +79,9 @@ blocks:
       jobs:
         - name: phpunit
           commands:
-            - checkout
+            - checkout --use-cache
             - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
+            - cp .env.example .env
             - php artisan key:generate
             # Run the unit tests from the phpunit binary in vendor folder
             - ./vendor/bin/phpunit
@@ -90,7 +91,7 @@ blocks:
       jobs:
         - name: sensiolabs
           commands:
-            - checkout
+            - checkout --use-cache
             # We clone the Security Checker repository, and cd into it.
             - git clone https://github.com/sensiolabs/security-checker.git
             - cd security-checker
