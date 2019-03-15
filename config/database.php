@@ -1,9 +1,6 @@
 <?php
 
-
-
-
-$DATABASE_URL=parse_url('postgres://ejrzosiavqfczd:e90ba908636a1721815a7e2e9d22b0b4f508772cbadd4f042859b5a879202df4@ec2-54-163-246-159.compute-1.amazonaws.com:5432/dd0mt4f3mg9e70');
+//$DATABASE_URL=parse_url('postgres://ejrzosiavqfczd:e90ba908636a1721815a7e2e9d22b0b4f508772cbadd4f042859b5a879202df4@ec2-54-163-246-159.compute-1.amazonaws.com:5432/dd0mt4f3mg9e70');
 
 return [
 
@@ -18,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
 
     /*
@@ -64,11 +61,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'host' => env('DB_HOST', ''),
+            'port' => env('DB_PORT', ''),
+            'database' => env('DB_DATABASE', ''),
+            'username' => env('DB_USERNAME', ''),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
