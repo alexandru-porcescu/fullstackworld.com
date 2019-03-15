@@ -48,12 +48,12 @@ blocks:
             - cp .env.example .env
             # We need to generate an application key for Laravel to work.
             - php artisan key:generate
-        - name: npm
-          commands:
-            - checkout
+         #- name: npm
+         #  commands:
+         #   - checkout
             # Try and find a cached version of our /node_modules dependencies folder.
-            - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
-            - npm install
+          #  - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
+          #  - npm install
             # Store the /node_modules folder into cache for later use.
             - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master node_modules
 
@@ -64,14 +64,10 @@ blocks:
           - checkout
           - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
       jobs:
-        - name: phpmd
-          commands:
-            # Run the PHP Mess Detector from our project dependency binary
-            - php vendor/bin/phpmd app/ text phpmd_ruleset.xml
-        - name: phpcs
-          commands:
+        #- name: phpcs
+        #  commands:
             # Run the PHP Code Sniffer from our project dependency binary
-            - php vendor/bin/phpcs app --report-full --standard=PSR2
+        #    - php vendor/bin/phpcs app --report-full --standard=PSR2
         - name: phpcpd
           commands:
             # Run the PHP Copy Paste Detector from online repository.
@@ -87,24 +83,6 @@ blocks:
             - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
             # Run the unit tests from the phpunit binary in vendor folder
             - ./vendor/bin/phpunit
-
-  - name: "Run Browser tests"
-    task:
-      jobs:
-        - name: laravel dusk
-          commands:
-            - checkout
-            - cp .env.example .env
-            # Create an empty .sqlite DB
-            - touch database/database.sqlite
-            - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
-            # Create an application key again.
-            - php artisan key:generate
-            # Start Laravel's built-in web server so the web driver used by Dusk can connect.
-            # We start the server using the .env.dusk.local environment file that uses SQLITE.
-            - php artisan serve --env=dusk.local &
-            # Run the tests
-            - php artisan dusk
 
   - name: "Run Security Tests"
     task:
