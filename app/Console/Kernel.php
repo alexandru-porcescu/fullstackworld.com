@@ -25,8 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // ToDo: Clean custom logic when we move from heroku
-        $schedule->command('test:log')->everyFiveMinutes();
+        $schedule->command('test:log')->twiceDaily(8, 17);
     }
 
     /**
