@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'database_connection' => env('WINK_DB_CONNECTION', 'pgsql'),
+    'database_connection' => env('WINK_DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'storage_disk' => env('WINK_STORAGE_DISK', 's3'),
+    'storage_disk' => env('WINK_STORAGE_DISK', 'public'),
 
     'storage_path' => env('WINK_STORAGE_PATH', 'images'),
 
