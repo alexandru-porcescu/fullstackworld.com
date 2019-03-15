@@ -40,7 +40,7 @@ blocks:
             # Read about caching: https://docs.semaphoreci.com/article/54-toolbox-reference#cache
             - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
             # Install our project composer dependencies
-            - composer install
+            - composer install --no-interaction --prefer-dist --optimize-autoloader
             # Store the /vendor folder into cache for later use.
             - cache store composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock) vendor
             # We are setting up the .env file from our example file which contains Semaphore DB data and proper app URL
