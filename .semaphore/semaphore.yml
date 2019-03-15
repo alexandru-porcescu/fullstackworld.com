@@ -55,7 +55,7 @@ blocks:
           #  - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
           #  - npm install
             # Store the /node_modules folder into cache for later use.
-            - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master node_modules
+           # - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum package-lock.json),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master node_modules
 
   - name: "Run Code Analysis"
     task:
@@ -81,6 +81,7 @@ blocks:
           commands:
             - checkout
             - cache restore composer-$SEMAPHORE_GIT_BRANCH-$(checksum composer.lock),composer-$SEMAPHORE_GIT_BRANCH,composer-master
+            - php artisan key:generate
             # Run the unit tests from the phpunit binary in vendor folder
             - ./vendor/bin/phpunit
 
