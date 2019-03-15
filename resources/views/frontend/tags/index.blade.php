@@ -3,8 +3,10 @@
 @section('content')
 
     <div class="columns is-desktop">
-
         <div class="column is-9">
+
+            <h1 class="title is-2 top-marginless">{{$pageTitle}}</h1>
+
             <div class="columns is-desktop is-multiline">
 
             @foreach($posts as $post)

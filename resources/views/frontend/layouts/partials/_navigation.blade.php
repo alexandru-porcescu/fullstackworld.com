@@ -1,5 +1,5 @@
 <div class="main-nav">
-    <div class="container is-fluid">
+    <div class="container is-widescren">
 
     <nav class="navbar" role="navigation" aria-label="main navigation">
 
@@ -20,27 +20,34 @@
             <div class="navbar-end">
 
                 <div class="navbar-item">
-                    <a href="{{ route('tags', ['slug' => 'laravel']) }}" title="Laravel" class="navbar-item {{ Route::is('tags') && Request::is(['laravel', 'laravel-news', 'laravel-packages']) ? 'button is-primary is-fullwidth' : '' }}">Laravel</a>
+                    <a href="{{ route('tags', ['slug' => 'laravel']) }}" title="Laravel" class="navbar-item {{ Route::is('tags') && Request::is(['laravel', 'laravel-news', 'laravel-packages']) ? 'button is-primary is-fullwidth' : '' }}">
+                        <i class="fab fa-laravel has-text-orange"></i>&nbsp;Laravel
+                    </a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('tags', ['slug' => 'vuejs']) }}" title="Vue.js" class="navbar-item {{ Route::is('tags') && Request::is(['vuejs', 'vuejs-news', 'vuejs-packages']) ? 'button is-primary is-fullwidth' : '' }}">Vue.js</a>
+                    <a href="{{ route('tags', ['slug' => 'vuejs']) }}" title="Vue.js" class="navbar-item {{ Route::is('tags') && Request::is(['vuejs', 'vuejs-news', 'vuejs-packages']) ? 'button is-primary is-fullwidth' : '' }}">
+                        <i class="fab fa-vuejs has-text-green"></i>&nbsp;Vue.js
+                    </a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('tags', ['slug' => 'angular']) }}" title="Angular" class="navbar-item {{ Route::is('tags') && Request::is(['angular', 'angular-news', 'angular-packages']) ? 'button is-primary is-fullwidth' : '' }}">Angular</a>
+                    <a href="{{ route('tags', ['slug' => 'angular']) }}" title="Angular" class="navbar-item {{ Route::is('tags') && Request::is(['angular', 'angular-news', 'angular-packages']) ? 'button is-primary is-fullwidth' : '' }}">
+                        <i class="fab fa-angular has-text-danger"></i>&nbsp;Angular
+                    </a>
                 </div>
 
                 <div class="navbar-item">
-                    <a href="{{ route('blog') }}" title="Blog" class="navbar-item {{ Route::is('blog') ? 'button is-primary is-fullwidth' : '' }}">Blog</a>
+                    <a href="{{ route('blog') }}" title="Blog" class="navbar-item {{ Route::is('blog') ? 'button is-primary is-fullwidth' : '' }}">
+                        <i class="fas fa-list-ul is-info"></i>&nbsp;Blog</a>
                 </div>
 
                 <div class="navbar-item has-text-centered">
                     <a target="_blank" href="https://github.com/gliterd" title="Github"
-                    class="button is-small is-light navbar-icon"><i class="fab fa-github"></i></a>
+                    class="button is-small is-dark is-outlined navbar-icon"><i class="fab fa-github"></i></a>
 
                     <a target="_blank" href="https://twitter.com/fullstack_world" title="Twitter"
-                    class="button is-small is-light navbar-icon"><i class="fab fa-twitter"></i></a>
+                    class="button is-small is-info is-outlined navbar-icon"><i class="fab fa-twitter"></i></a>
                 </div>
 
             </div>
