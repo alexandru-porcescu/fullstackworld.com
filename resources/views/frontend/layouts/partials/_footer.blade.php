@@ -1,4 +1,4 @@
-<footer class="section has-background-grey">
+<footer class="section">
     <div class="container">
 
         <div class="content has-text-centered footer-links">
@@ -22,7 +22,7 @@
 
 
         <div class="content has-text-centered">
-            <div class="powered">
+            <div class="powered has-text-black">
 
                 <span>
                     Made with <i class="fas fa-heart"></i> in <b>Germany</b>
