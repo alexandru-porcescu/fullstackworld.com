@@ -22,18 +22,18 @@
     <meta name="keywords" content="{{ $selectedPost->meta['opengraph_title'] }}" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ $selectedPost->meta['opengraph_title'] }}" />
-    <meta property="og:description" content="{{ $selectedPost->meta['opengraph_description'] }}" />
+    <meta property="og:title" content="{{ $selectedPost->meta['opengraph_title'] ?: $selectedPost->title }}" />
+    <meta property="og:description" content="{{ $selectedPost->meta['opengraph_description'] ?: $selectedPost->meta_description }}" />
     <meta property="og:site_name" content="FullStackWorld" />
     <meta property="og:url" content="{{ request()->url() }}" />
-    <meta property="og:image" content="{{ $selectedPost->meta['opengraph_image'] }}" />
+    <meta property="og:image" content="{{ $selectedPost->meta['opengraph_image'] ?: ($selectedPost->featured_image ?: asset('img/placeholder.png')) }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mhetreramesh" />
     <meta name="twitter:creator" content="@mhetreramesh" />
-    <meta name="twitter:title" content="{{ $selectedPost->meta['twitter_title'] }}" />
-    <meta name="twitter:description" content="{{ $selectedPost->meta['twitter_description'] }}" />
-    <meta name="twitter:image" content="{{ $selectedPost->meta['twitter_image'] }}"/>
+    <meta name="twitter:title" content="{{ $selectedPost->meta['twitter_title'] ?: $selectedPost->title }}" />
+    <meta name="twitter:description" content="{{ $selectedPost->meta['twitter_description'] ?: $selectedPost->meta_description }}" />
+    <meta name="twitter:image" content="{{ $selectedPost->meta['twitter_image'] ?: ($selectedPost->featured_image ?: asset('img/placeholder.png')) }}"/>
 @else
     <title>Full Stack World</title>
 @endif
