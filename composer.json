@@ -16,6 +16,7 @@
         "onicial/bulmify": "^1.0",
         "sentry/sentry-laravel": "1.0.0",
         "spatie/laravel-analytics": "^3.6",
+        "willvincent/feeds": "^1.1",
         "writingink/wink": "*"
     },
     "require-dev": {

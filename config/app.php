@@ -177,6 +177,8 @@ return [
         \Sentry\Laravel\ServiceProvider::class,
         \Spatie\Analytics\AnalyticsServiceProvider::class,
 
+        \willvincent\Feeds\FeedsServiceProvider::class,
+
     ],
 
     /*
@@ -227,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Sentry' => Sentry\Laravel\Facade::class,
 
+        'Feeds'    => willvincent\Feeds\Facades\FeedsFacade::class,
     ],
 
 ];

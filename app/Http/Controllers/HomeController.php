@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use willvincent\Feeds\Facades\FeedsFacade;
 use Wink\WinkPost;
 
 class HomeController extends Controller
 {
     function index()
     {
+        /*
+        $jobs = FeedsFacade::make('https://larajobs.com/feed');
+        $t = $jobs->get_items()[0];
+        dd([$t->get_title(), $t->get_id(), $t->get_date(), $t->get_author(), $t->get_permalink()]);
+        */
         $laravelPosts = WinkPost::whereHas('tags', function ($query) {
                 $query->where('slug', 'laravel');
             })
