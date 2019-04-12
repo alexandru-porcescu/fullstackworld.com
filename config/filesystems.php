@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
+    'cloud' => env('FILESYSTEM_CLOUD', 'b2'),
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +63,13 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'visibility' => 'public',
+        ],
+
+        'b2' => [
+            'driver'         => 'b2',
+            'accountId'      => env('BACKBLAZE_ACCOUNT_ID'),
+            'applicationKey' => env('BACKBLAZE_APP_KEY'),
+            'bucketName'     => env('BACKBLAZE_BUCKET_NAME'),
         ],
 
     ],

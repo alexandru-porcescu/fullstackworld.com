@@ -179,6 +179,8 @@ return [
 
         \willvincent\Feeds\FeedsServiceProvider::class,
 
+        \Gliterd\BackblazeB2\BackblazeB2ServiceProvider::class,
+
     ],
 
     /*
