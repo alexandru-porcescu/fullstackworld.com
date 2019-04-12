@@ -105,7 +105,7 @@ return [
             \Spatie\Backup\Notifications\Notifications\BackupHasFailed::class => [],
             \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFound::class => [],
             \Spatie\Backup\Notifications\Notifications\CleanupHasFailed::class => [],
-            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessful::class => [],
+            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessful::class => ['slack'],
             \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFound::class => [],
             \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessful::class => [],
         ],
@@ -126,11 +126,11 @@ return [
             /*
              * If this is set to null the default channel of the webhook will be used.
              */
-            'channel' => null,
+            'channel' => '#tech',
 
-            'username' => null,
+            'username' => 'Backup bot',
 
-            'icon' => null,
+            'icon' => ':robot:',
 
         ],
     ],
