@@ -35,6 +35,7 @@ class PostsController extends Controller
         $similarPosts = WinkPost::whereHas('tags', function ($query) use($tags) {
                 $query->whereIn('name', $tags);
             })
+            ->where('id', '<>', $selectedPost->id)
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->limit(3)->get();
