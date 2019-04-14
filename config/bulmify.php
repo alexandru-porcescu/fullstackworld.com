@@ -3,7 +3,7 @@
 return [
     'cookie' => [
 
-        'show_acceptance_box' => true,
+        'show_acceptance_box' => false,
 
         'message' => 'Using cookies enables us to optimally design and continually improve our website. If you continue using the website, you automatically give your consent to receive cookies from it.',
 
