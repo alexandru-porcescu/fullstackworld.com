@@ -42,6 +42,8 @@ class CreateSitemap extends Command
 
         $sitemap->store('xml', 'sitemap');
 
+        app('sentry')->captureMessage('Sitemap generated: '. date('Y-m-d h:i:s'));
+
         $this->info('Sitemap created!');
     }
 }
