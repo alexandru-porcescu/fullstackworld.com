@@ -8,6 +8,7 @@
     @include('frontend.layouts.partials._meta')
     @include('frontend.layouts.partials._styles')
     @include('frontend.layouts.partials._analytics')
+    @include('frontend.layouts.partials.addsense')
 
 </head>
 <body>
