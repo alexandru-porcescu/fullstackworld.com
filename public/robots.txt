@@ -1,2 +1,19 @@
 User-agent: *
-Disallow:
+
+Sitemap: https://fullstackworld.com/sitemap.xml
+
+Allow: /sitemap.xml
+
+Allow: /post/*
+Allow: /laravel
+Allow: /laravel-news
+Allow: /laravel-packages
+Allow: /vuejs
+Allow: /vuejs-news
+Allow: /vuejs-packages
+Allow: /angular
+Allow: /angular-news
+Allow: /angular-packages
+
+Disallow: /wink/*
+Disallow: /stats
