@@ -34,6 +34,8 @@
     <meta name="twitter:title" content="{{ $selectedPost->meta['twitter_title'] ?: $selectedPost->title }}" />
     <meta name="twitter:description" content="{{ $selectedPost->meta['twitter_description'] ?: $selectedPost->meta_description }}" />
     <meta name="twitter:image" content="{{ $selectedPost->meta['twitter_image'] ?: ($selectedPost->featured_image ?: asset('img/placeholder.png')) }}"/>
+@elseif(!empty($pageTitle))
+    <title>{{$pageTitle}} | Full Stack World</title>
 @else
     <title>Full Stack World</title>
 @endif
