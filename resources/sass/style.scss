@@ -56,6 +56,10 @@ footer
   }
   .card {
     min-height: 24em;
+    border-radius: .85714em;
+    .card-image img {
+      border-radius: .85714em .85714em 0 0;
+    }
   }
   .footer-link{
     bottom:0.7em;
@@ -65,11 +69,16 @@ footer
 .short-post-card {
   .card {
     min-height: 18em;
+    border-radius: .85714em;
+    .card-image img {
+      border-radius: .85714em .85714em 0 0;
+    }
   }
 }
 .short-post-card, .short-post {
   .card {
     &::after {
+      border-radius: .85714em;
       position: absolute;
       top: 0;
       left: 0;
