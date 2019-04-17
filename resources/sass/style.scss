@@ -73,6 +73,14 @@ footer
     .card-image img {
       border-radius: .85714em .85714em 0 0;
     }
+    .subtitle {
+      bottom: 1rem;
+      right: 1rem;
+      position: absolute;
+    }
+    .card-content{
+      min-height: 10rem;
+    }
   }
 }
 .short-post-card, .short-post {
