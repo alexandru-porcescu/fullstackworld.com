@@ -14,6 +14,8 @@ class HomeController extends Controller
         $t = $jobs->get_items()[0];
         dd([$t->get_title(), $t->get_id(), $t->get_date(), $t->get_author(), $t->get_permalink()]);
         */
+
+        $blockAdsense = true;
         $laravelPosts = WinkPost::whereHas('tags', function ($query) {
                 $query->where('slug', 'laravel');
             })
@@ -38,6 +40,6 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
-        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts'));
+        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense'));
     }
 }
