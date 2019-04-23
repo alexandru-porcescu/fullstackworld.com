@@ -37,7 +37,7 @@
 @elseif(!empty($pageTitle))
     <title>{{$pageTitle}} | Full Stack World</title>
 @else
-    <title>Full Stack World</title>
+    <title>Full Stack World - Latest updates in Laravel, Angular, Vuejs</title>
 @endif
 
 <meta name="robots" content="index,follow" />

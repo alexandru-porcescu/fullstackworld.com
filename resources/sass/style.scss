@@ -59,6 +59,11 @@ footer
   }
   .card {
     min-height: 24em;
+    border-radius: .85714em;
+    .card-image img {
+      border-radius: .85714em .85714em 0 0;
+      border-bottom: 1px solid rgba(42,42,42,.25);
+    }
   }
   .footer-link{
     bottom:0.7em;
@@ -68,11 +73,25 @@ footer
 .short-post-card {
   .card {
     min-height: 18em;
+    border-radius: .85714em;
+    .card-image img {
+      border-radius: .85714em .85714em 0 0;
+      border-bottom: 1px solid rgba(42,42,42,.25);
+    }
+    .subtitle {
+      bottom: 1rem;
+      right: 1rem;
+      position: absolute;
+    }
+    .card-content{
+      min-height: 10rem;
+    }
   }
 }
 .short-post-card, .short-post {
   .card {
     &::after {
+      border-radius: .85714em;
       position: absolute;
       top: 0;
       left: 0;
@@ -112,7 +131,7 @@ footer
 }
 .title-box {
   border-bottom: 0.5px solid rgba(42, 42, 42, 0.25);
-  margin: 0.67em 0;
+  margin: 3em 0;
   .title {
     margin: 0;
   }
