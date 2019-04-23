@@ -2,37 +2,31 @@
 
 namespace App\Mail;
 
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class InHouseEmail extends Mailable
+class CommandFinished extends Mailable
 {
     use Queueable, SerializesModels;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public $signature;
+
+    public function __construct($signature)
     {
-        //
+        $this->signature = $signature;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
         return $this->from('hello@mail.fullstackworld.com', 'FullStackWorld')
-            ->view('mails.in-house')
+            ->subject('Command Finished - '.$this->signature.' | '. Carbon::now())
+            ->view('mails.command-finished')
             ->with(
                 [
-                    'testVarOne' => '1',
+                    'signature' => $this->signature,
                 ]);
     }
 }

@@ -2,9 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Mail\CommandFinished;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Wink\WinkPost;
 use Wink\WinkTag;
@@ -42,7 +44,7 @@ class CreateSitemap extends Command
 
         $sitemap->store('xml', 'sitemap');
 
-        app('sentry')->captureMessage('Sitemap generated: '. date('Y-m-d h:i:s'));
+        Mail::to("mhetreramesh@gmail.com")->send(new CommandFinished($this->signature));
 
         $this->info('Sitemap created!');
     }
