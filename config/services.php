@@ -29,7 +29,7 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
         'options' => [
-            'endpoint' => env('SPARKPOST_ENDPOINT','https://api.eu.sparkpost.com/api/v1')
+            'endpoint' => env('SPARKPOST_ENDPOINT','https://api.eu.sparkpost.com/api/v1/transmissions')
         ]
     ],
 
