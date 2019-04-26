@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="navbar-item has-text-centered">
-                    <a target="_blank" href="https://github.com/gliterd" title="Github"
-                    class="button is-small is-dark is-outlined navbar-icon"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/showcase/fullstackworld" title="Github"
+                    class="button is-small is-primary is-outlined navbar-icon"><i class="fab fa-linkedin"></i></a>
 
                     <a target="_blank" href="https://twitter.com/fullstack_world" title="Twitter"
                     class="button is-small is-info is-outlined navbar-icon"><i class="fab fa-twitter"></i></a>

@@ -13,8 +13,8 @@
 
 
         <div class="content has-text-centered">
-            <a target="_blank" href="https://github.com/gliterd" title="Github"
-               class="button is-small is-dark is-outlined navbar-icon"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/showcase/fullstackworld" title="Github"
+               class="button is-small is-white is-outlined navbar-icon"><i class="fab fa-linkedin"></i></a>
 
             <a target="_blank" href="https://twitter.com/fullstack_world" title="Twitter"
                class="button is-small is-info is-outlined navbar-icon"><i class="fab fa-twitter"></i></a>
@@ -22,7 +22,7 @@
 
 
         <div class="content has-text-centered">
-            <div class="powered has-text-black">
+            <div class="powered has-text-gray">
 
                 <span>
                     Made with <i class="fas fa-heart"></i> in <b>Germany</b>
