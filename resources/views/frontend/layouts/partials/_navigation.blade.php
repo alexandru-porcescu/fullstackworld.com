@@ -5,8 +5,8 @@
 
         <div class="navbar-brand">
             <a href="/" class="navbar-item router-link-exact-active router-link-active">
-                <img src="{{ asset('img/logo/main.png') }}" class="logo" alt="Fullstackworld"></a>
-
+                <img src="{{ asset('img/logo/main.png') }}" class="logo" alt="Fullstackworld">
+            </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
             data-target="navbarBasicExample">
@@ -14,6 +14,7 @@
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
+
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
@@ -43,11 +44,9 @@
                 </div>
 
                 <div class="navbar-item has-text-centered">
-                    <a target="_blank" href="https://www.linkedin.com/showcase/fullstackworld" title="Github"
-                    class="button is-small is-primary is-outlined navbar-icon"><i class="fab fa-linkedin"></i></a>
-
-                    <a target="_blank" href="https://twitter.com/fullstack_world" title="Twitter"
-                    class="button is-small is-info is-outlined navbar-icon"><i class="fab fa-twitter"></i></a>
+                    <div class="control has-icons-left">
+                        <input type="text" class="input is-large" placeholder="SEARCH" id="main-search" name="main-search">
+                    </div>
                 </div>
 
             </div>

@@ -8,7 +8,7 @@
         <section class="modal-card-body">
 
 
-            <h4 class="title is-5">{{ __('onicial.newsletter.title') }}</h4>
+            <h4 class="title is-5">{{ __('fullstackworld.newsletter.title') }}</h4>
             <form class="form-loader" id="form-contact" method="POST"
                   action="{{ route('home') }}">
                 @csrf
@@ -17,7 +17,7 @@
                     <div class="control">
                         <input id="firstname" name="firstname" value="{{ old('firstname') }}"
                                class="input {{ $errors->has('firstname') ? ' is-danger' : '' }}" type="text"
-                               placeholder="{{ __('onicial.newsletter.form.input.firstname') }}" required>
+                               placeholder="{{ __('fullstackworld.newsletter.form.input.firstname') }}" required>
                     </div>
 
                     @if ($errors->has('firstname'))
@@ -29,7 +29,7 @@
                     <div class="control">
                         <input id="email" name="email" value="{{ old('email') }}"
                                class="input {{ $errors->has('firstname') ? ' is-danger' : '' }}" type="email"
-                               placeholder="{{ __('onicial.newsletter.form.input.email') }}" required>
+                               placeholder="{{ __('fullstackworld.newsletter.form.input.email') }}" required>
                     </div>
 
                     @if ($errors->has('email'))
@@ -40,7 +40,7 @@
                 <div class="field">
                     <div class="control">
                         <button type="submit"
-                                class="button is-primary is-fullwidth">{{ __('onicial.newsletter.form.submit') }}</button>
+                                class="button is-primary is-fullwidth">{{ __('fullstackworld.newsletter.form.submit') }}</button>
                     </div>
                 </div>
 
