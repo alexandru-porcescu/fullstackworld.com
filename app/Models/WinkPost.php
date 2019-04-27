@@ -13,4 +13,9 @@ class WinkPost extends WinkPostOriginal
     {
         return $this->id;
     }
+
+    public function shouldBeSearchable()
+    {
+        return $this->published;
+    }
 }
