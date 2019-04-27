@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('backup:run')->daily()->at('02:00');
 
         $schedule->command('sitemap:create')->daily()->at('09:00');
-        
+
         $schedule->command('php artisan scout:import "App\Models\Postcode"')->daily()->at('08:00');
 
         $schedule->command('test:log')->twiceDaily(8, 17);
