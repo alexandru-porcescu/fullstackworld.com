@@ -9,6 +9,8 @@ class TagsController extends Controller
 {
     function index($slug)
     {
+        $blockAdsense = true;
+
         $tag = WinkTag::where('slug', $slug)->first();
         
         if (!$tag) {
@@ -24,6 +26,6 @@ class TagsController extends Controller
         ->orderBy('publish_date', 'DESC')
         ->simplePaginate(10);
 
-        return view('frontend.tags.index', compact('posts', 'pageTitle'));
+        return view('frontend.tags.index', compact('posts', 'pageTitle', 'blockAdsense'));
     }
 }
