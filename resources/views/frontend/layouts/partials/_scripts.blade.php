@@ -1,5 +1,5 @@
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="{{ asset('js/jquery-3.4.0.min.js') }}"></script>
 
 <script>
     (function() {
@@ -27,19 +27,22 @@
     </script>
 @endif
 
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="{{ asset('js/algolia/algoliasearch.min.js') }}"></script>
+<script src="{{ asset('js/algolia/autocomplete.min.js') }}"></script>
 <script>
-    var client = algoliasearch('CK8SRN7RCW', '95610d69fd2d5afe6158bc7e426548ea');
+    var client = algoliasearch('{{config('scout.algolia.id')}}', '{{config('scout.algolia.secret')}}');
     var index = client.initIndex('wink_posts');
     autocomplete('#main-search', { hint: false }, [
         {
             source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-            displayKey: 'wink_posts',
+            autoselect: true,
             templates: {
                 suggestion: function(suggestion) {
-                    return suggestion.title;
-                }
+                    return '<label class="title is-6">'+suggestion.title+'</label><br><p class="short-desc">'+suggestion.excerpt+'</p>';
+                },
+                @if(config('fullstackworld.show_algolia_logo'))
+                footer: '<div class="algolia-branding is-pulled-right">Search by <img src="{{ asset('img/external/logo-algolia.png') }}" /></div>',
+                @endif
             }
         }
     ]).on('autocomplete:selected', function(event, suggestion, dataset, context) {
@@ -49,26 +52,6 @@
     $('#main-search').after('<span class="icon is-medium is-left"><i class="fas fa-search"></i></span>')
 
 </script>
-
-
-<style>
-.algolia-autocomplete .aa-dropdown-menu {
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid #999;
-    border-top: none;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 0.5px solid #F5F5F5;
-}
-.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #F5F5F5;
-    color: #3EAF7C;
-}
-</style>
-
 @include('bulma::notifications')
 
 @yield('scripts')

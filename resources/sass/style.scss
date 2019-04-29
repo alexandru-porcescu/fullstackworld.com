@@ -200,3 +200,32 @@ footer {
 .has-text-orange {
   color:#F56850;
 }
+
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 8px 10px;
+  border-bottom: 0.5px solid #F5F5F5;
+  .short-desc {
+    max-height: 3rem;
+    overflow-y: hidden;
+  }
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #F5F5F5;
+  color: #3EAF7C;
+}
+.algolia-branding {
+  font-size: 0.8em;
+  margin: 0.5em 0.2em;
+}
+.algolia-branding img {
+  height: 0.9em;
+  margin-bottom: - 0.2em;
+  margin-right: 0.4rem;
+}
