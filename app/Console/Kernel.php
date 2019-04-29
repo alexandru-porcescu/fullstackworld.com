@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('sitemap:create')->daily()->at('09:00');
 
-        $schedule->command('php artisan scout:import "App\Models\Postcode"')->daily()->at('08:00');
+        $schedule->command('php artisan scout:import "App\Models\WinkPost"')->daily()->at('08:00');
 
         $schedule->command('test:log')->twiceDaily(8, 17);
     }
