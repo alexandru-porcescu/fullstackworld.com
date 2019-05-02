@@ -39,7 +39,7 @@ class CreateSitemap extends Command
         $posts = WinkPost::all();
 
         foreach ($posts as $post) {
-            $sitemap->add(URL::to($post->slug), Carbon::now(), '0.9', 'weekly');
+            $sitemap->add('post/'.URL::to($post->slug), Carbon::now(), '0.9', 'weekly');
         }
 
         $sitemap->store('xml', 'sitemap');
