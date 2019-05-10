@@ -32,6 +32,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('php artisan scout:import "App\Models\WinkPost"')->daily()->at('08:00');
 
         $schedule->command('test:log')->twiceDaily(8, 17);
+
+        $schedule->command('telescope:prune --hours=48')->daily();
     }
 
     /**
