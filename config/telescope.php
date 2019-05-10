@@ -91,11 +91,9 @@ return [
     */
 
     'ignore_paths' => [
-        'wink'
     ],
 
     'ignore_commands' => [
-        'migrate'
     ],
 
     /*
