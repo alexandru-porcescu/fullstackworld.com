@@ -76,7 +76,8 @@ return [
 
     'middleware' => [
         'web',
-        Authorize::class,
+        //Authorize::class,
+        \Wink\Http\Middleware\Authenticate::class
     ],
 
     /*
@@ -91,7 +92,7 @@ return [
     */
 
     'ignore_paths' => [
-        //
+        'wink'
     ],
 
     'ignore_commands' => [
