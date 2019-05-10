@@ -76,7 +76,6 @@ return [
 
     'middleware' => [
         'web',
-        //Authorize::class,
         \Wink\Http\Middleware\Authenticate::class
     ],
 
@@ -96,7 +95,7 @@ return [
     ],
 
     'ignore_commands' => [
-        //
+        'migrate'
     ],
 
     /*
