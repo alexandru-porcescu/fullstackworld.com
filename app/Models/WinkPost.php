@@ -18,4 +18,20 @@ class WinkPost extends WinkPostOriginal
     {
         return $this->published;
     }
+
+    public function toSearchableArray()
+    {
+        $array = $this->toArray();
+
+        $data = [
+            'id' => $array['id'],
+            'slug' => $array['slug'],
+            'title' => $array['title'],
+            'excerpt' => $array['excerpt'],
+            'body' => $array['body'],
+            'featured_image' => $array['featured_image'],
+        ];
+
+        return $data;
+    }
 }
