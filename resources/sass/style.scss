@@ -59,9 +59,9 @@ footer
   }
   .card {
     min-height: 24em;
-    border-radius: .85714em;
+    border-radius: .45714em;
     .card-image img {
-      border-radius: .85714em .85714em 0 0;
+      border-radius: .45714em .45714em 0 0;
       border-bottom: 1px solid rgba(42,42,42,.25);
     }
   }
@@ -73,9 +73,9 @@ footer
 .short-post-card {
   .card {
     min-height: 18em;
-    border-radius: .85714em;
+    border-radius: .45714em;
     .card-image img {
-      border-radius: .85714em .85714em 0 0;
+      border-radius: .45714em .45714em 0 0;
       border-bottom: 1px solid rgba(42,42,42,.25);
     }
     .subtitle {
@@ -91,7 +91,7 @@ footer
 .short-post-card, .short-post {
   .card {
     &::after {
-      border-radius: .85714em;
+      border-radius: .45714em;
       position: absolute;
       top: 0;
       left: 0;
