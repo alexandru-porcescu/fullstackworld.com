@@ -2,14 +2,14 @@
 
 namespace App\Console\Commands;
 
-use App\Mail\CommandFinished;
+use Wink\WinkTag;
 use Carbon\Carbon;
+use Wink\WinkPost;
+use App\Mail\CommandFinished;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
-use Wink\WinkPost;
-use Wink\WinkTag;
+use Illuminate\Support\Facades\Mail;
 
 class CreateSitemap extends Command
 {
@@ -24,7 +24,6 @@ class CreateSitemap extends Command
 
     public function handle()
     {
-
         $sitemap = App::make('sitemap');
 
         $sitemap->add(URL::to('/'), Carbon::now(), '1.0', 'daily');
@@ -44,7 +43,7 @@ class CreateSitemap extends Command
 
         $sitemap->store('xml', 'sitemap');
 
-        Mail::to("mhetreramesh@gmail.com")->send(new CommandFinished($this->signature));
+        Mail::to('mhetreramesh@gmail.com')->send(new CommandFinished($this->signature));
 
         $this->info('Sitemap created!');
     }

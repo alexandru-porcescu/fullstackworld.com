@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkPost;
 use Wink\WinkTag;
+use Wink\WinkPost;
 
 class TagsController extends Controller
 {
-    function index($slug)
+    public function index($slug)
     {
         $blockAdsense = true;
 
         $tag = WinkTag::where('slug', $slug)->first();
-        
-        if (!$tag) {
+
+        if (! $tag) {
             return abort(404);
         }
 
         $pageTitle = 'Latest in '.$tag->name;
-        
-        $posts = WinkPost::with('tags')->whereHas('tags', function ($query) use($tag) {
+
+        $posts = WinkPost::with('tags')->whereHas('tags', function ($query) use ($tag) {
             $query->where('slug', $tag->slug);
         })
         ->live()
