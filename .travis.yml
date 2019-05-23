@@ -1,0 +1,49 @@
+sudo: true
+dist: trusty
+
+language: php
+
+php:
+  - 7.3
+
+addons:
+  chrome: stable
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+
+services:
+  - mysql
+
+cache:
+  directories:
+    - vendor
+    - node_modules
+
+install:
+  - composer self-update
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+
+before_script:
+  - rm composer.lock
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - mysql -e 'CREATE DATABASE testing;'
+  - cp .env.travis .env
+  - cp .env.travis .env.testing
+  - cp phpunit.travis.xml phpunit.xml
+  - php artisan key:generate
+  - php artisan storage:link
+  - npm install
+  - npm run prod
+  - php artisan serve &
+
+script:
+  - php vendor/bin/phpunit --coverage-clover build/coverage/xml
+
+after_script:
+
+notifications:
+  email: false
