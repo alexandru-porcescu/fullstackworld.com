@@ -65,11 +65,8 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
     {
         Gate::define('viewTelescope', function ($user) {
             return in_array($user->email, [
-<<<<<<< Updated upstream
-                'mhetreramesh@gmail.com'
-=======
-                ['hello@fullstackworld.com', 'mhetreramesh@gmail.com'],
->>>>>>> Stashed changes
+                'hello@fullstackworld.com',
+                'mhetreramesh@gmail.com',
             ]);
         });
     }

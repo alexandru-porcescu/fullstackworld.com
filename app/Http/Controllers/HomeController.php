@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use willvincent\Feeds\Facades\FeedsFacade;
 use Wink\WinkPost;
+use willvincent\Feeds\Facades\FeedsFacade;
 
 class HomeController extends Controller
 {
-    function index()
+    public function index()
     {
         /*
         $jobs = FeedsFacade::make('https://larajobs.com/feed');
@@ -17,24 +17,24 @@ class HomeController extends Controller
 
         $blockAdsense = true;
         $laravelPosts = WinkPost::whereHas('tags', function ($query) {
-                $query->where('slug', 'laravel');
-            })
+            $query->where('slug', 'laravel');
+        })
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->limit(6)
             ->get();
 
         $vuejsPosts = WinkPost::whereHas('tags', function ($query) {
-                $query->where('slug', 'vuejs');
-            })
+            $query->where('slug', 'vuejs');
+        })
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->limit(6)
             ->get();
 
         $angularPosts = WinkPost::whereHas('tags', function ($query) {
-                $query->where('slug', 'angular');
-            })
+            $query->where('slug', 'angular');
+        })
             ->live()
             ->orderBy('publish_date', 'DESC')
             ->limit(6)

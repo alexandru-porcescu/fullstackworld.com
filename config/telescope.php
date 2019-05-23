@@ -1,7 +1,6 @@
 <?php
 
 use Laravel\Telescope\Watchers;
-use Laravel\Telescope\Http\Middleware\Authorize;
 
 return [
 
@@ -76,7 +75,7 @@ return [
 
     'middleware' => [
         'web',
-        \Wink\Http\Middleware\Authenticate::class
+        \Wink\Http\Middleware\Authenticate::class,
     ],
 
     /*
@@ -91,11 +90,11 @@ return [
     */
 
     'ignore_paths' => [
-        'wink'
+        'wink',
     ],
 
     'ignore_commands' => [
-        'migrate'
+        'migrate',
     ],
 
     /*

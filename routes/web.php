@@ -24,4 +24,3 @@ Route::get('/post/{slug}', 'PostsController@post')->name('post');
 Route::get('/stats', 'Admin\StatsController@index')->name('stats');
 
 Route::get('/{slug}', 'TagsController@index')->name('tags');
-
