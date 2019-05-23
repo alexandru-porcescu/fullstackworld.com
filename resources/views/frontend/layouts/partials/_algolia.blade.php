@@ -2,7 +2,7 @@
 <script src="{{ asset('js/algolia/autocomplete.min.js') }}"></script>
 <script>
     var client = algoliasearch('{{config('scout.algolia.id')}}', '{{config('scout.algolia.secret')}}');
-    var index = client.initIndex('wink_posts');
+    var index = client.initIndex('posts');
     autocomplete('#main-search', { hint: false }, [
         {
             source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
