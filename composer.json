@@ -45,7 +45,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+              "laravel/telescope"
+            ]
         }
     },
     "autoload": {
@@ -64,6 +66,12 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": {
+        "writingink/wink": {
+            "type": "path",
+            "url": "./wink"
+        }
+    },
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
