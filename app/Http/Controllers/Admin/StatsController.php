@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Analytics;
-use Spatie\Analytics\Period;
 use Wink\WinkPost;
+use Spatie\Analytics\Period;
+use App\Http\Controllers\Controller;
 
 class StatsController extends Controller
 {
-    function index()
+    public function index()
     {
-        if(!auth('wink')->check()) {
+        if (! auth('wink')->check()) {
             return redirect()->route('wink.auth.login');
         }
 
@@ -26,7 +26,7 @@ class StatsController extends Controller
             'ga:sessions',
             [
                 'metrics' => 'ga:sessions, ga:pageviews, ga:users',
-                'dimensions' => 'ga:yearMonth'
+                'dimensions' => 'ga:yearMonth',
             ]
         );
 
