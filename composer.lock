@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d3ae03247a6e86cbaa34ec351cf66a4",
+    "content-hash": "82e4d83aa375a19c2cc1bafb484daea1",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -5248,7 +5248,7 @@
         },
         {
             "name": "writingink/wink",
-            "version": "dev-master",
+            "version": "dev-feature/Travis-CI",
             "dist": {
                 "type": "path",
                 "url": "./wink",
@@ -8103,7 +8103,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "writingink/wink": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
