@@ -20,3 +20,7 @@
 - After vagrant setup done, do `vagrant ssh` & `cd code && php artisan migrate --seed`
 - Add entry of host in your hosts `192.168.11.11  fullstackworld.test`
 - Visit `fullstackworld.test`
+- Login Page: `fullstackworld.test/wink`
+    - Credentials:
+        - Email: `hello@fullstackworld.com`
+        - Password: `secret`
