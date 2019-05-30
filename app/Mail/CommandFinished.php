@@ -6,7 +6,6 @@ use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
 class CommandFinished extends Mailable
 {
@@ -22,7 +21,7 @@ class CommandFinished extends Mailable
     public function build()
     {
         return $this->from('hello@mail.fullstackworld.com', 'FullStackWorld')
-            ->subject('Command Finished - '.$this->signature.' | '. Carbon::now())
+            ->subject('Command Finished - '.$this->signature.' | '.Carbon::now())
             ->view('mails.command-finished')
             ->with(
                 [

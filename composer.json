@@ -26,7 +26,7 @@
         "spatie/laravel-analytics": "^3.6",
         "spatie/laravel-backup": "^6.1",
         "willvincent/feeds": "^1.1",
-        "writingink/wink": "*"
+        "writingink/wink": "*@dev"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

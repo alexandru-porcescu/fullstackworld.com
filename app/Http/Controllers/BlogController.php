@@ -6,7 +6,7 @@ use Wink\WinkPost;
 
 class BlogController extends Controller
 {
-    function index()
+    public function index()
     {
         $posts = WinkPost::with('tags')
             ->live()
