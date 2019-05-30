@@ -16,11 +16,11 @@ Welcome to the [fullstackworld.com](https://fullstackworld.com) codebase. We are
 ## What is FullStackWorld.com anyway?
 [fullstackworld.com](https://fullstackworld.com) is a platform developers help each others with the stories. We believe web is becoming more & more full stack development, so instead of World Wide Web why not Full Stack World?
 
-
+Below are the steps for how you can do the setup with Laravel [Homestead](https://laravel.com/docs/5.8/homestead#installation-and-setup) (Which we recommend 👩‍💻). You are free to do your own setup.
 ## Prerequisite
 
 - `PHP V7.2+` installed on your system
-- Homestead prerequisite must be matching already. [This](https://laravel.com/docs/5.8/homestead#installation-and-setup) is how you can do it.
+- [Homestead](https://laravel.com/docs/5.8/homestead#installation-and-setup) prerequisite must be matching already.
 
 ## How to setup?
 
