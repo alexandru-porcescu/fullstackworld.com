@@ -21,7 +21,7 @@ From beginners to experts, everyone is welcome to find their place in the commun
 
 ## Getting Started
 
-Below requirements and quick-start guide is based on standards which we recommend. You are free to pick your own setup 👩‍💻.
+Below requirements and quick-start guide is based on standards which we recommend. You are free to pick your own setup 👩‍💻
 
 ### Prerequisite
 
