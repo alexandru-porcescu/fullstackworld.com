@@ -21,6 +21,8 @@ Route::get('/journal', 'PostsController@index')->name('journal');
 
 Route::get('/post/{slug}', 'PostsController@post')->name('post');
 
+Route::get('/page/{slug}', 'PageController@index')->name('page');
+
 Route::get('/stats', 'Admin\StatsController@index')->name('stats');
 
 Route::get('/{slug}', 'TagsController@index')->name('tags');
