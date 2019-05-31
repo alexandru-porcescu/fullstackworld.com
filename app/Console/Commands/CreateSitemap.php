@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Wink\WinkPage;
 use Wink\WinkTag;
 use Carbon\Carbon;
 use Wink\WinkPost;
@@ -39,6 +40,12 @@ class CreateSitemap extends Command
 
         foreach ($posts as $post) {
             $sitemap->add(URL::to('post/'.$post->slug), Carbon::now(), '0.9', 'weekly');
+        }
+
+        $pages = WinkPage::get();
+
+        foreach ($pages as $page) {
+            $sitemap->add(URL::to('page/'.$page->slug), Carbon::now(), '0.9', 'weekly');
         }
 
         $sitemap->store('xml', 'sitemap');

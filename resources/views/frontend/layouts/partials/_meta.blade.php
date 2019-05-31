@@ -1,21 +1,21 @@
 @if(!empty($page))
-    <title>Page Title | Full Stack World</title>
-    <meta name="description" content="{{ $page->description }}" />
-    <meta name="keywords" content="{{ $page->keywords }}" />
+    <title>{{$page->title}} | Full Stack World</title>
+    <meta name="description" content="{{ $page->meta['meta_description'] }}" />
+    <meta name="keywords" content="{{ $page->meta['opengraph_title'] }}" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ $page->title }}" />
-    <meta property="og:description" content="{{ $page->description }}" />
-    <meta property="og:site_name" content="{{ config('app.name') }}" />
+    <meta property="og:title" content="{{ $page->meta['opengraph_title'] ?: $page->title }}" />
+    <meta property="og:description" content="{{ $page->meta['opengraph_description'] ?: $page->meta_description }}" />
+    <meta property="og:site_name" content="FullStackWorld" />
     <meta property="og:url" content="{{ request()->url() }}" />
-    <meta property="og:image" content="{{ asset('img/meta.jpg')}}" />
+    <meta property="og:image" content="{{ $page->meta['opengraph_image'] ?: ($page->featured_image ?: asset('img/placeholder.png')) }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@mhetreramesh" />
     <meta name="twitter:creator" content="@mhetreramesh" />
-    <meta name="twitter:title" content="{{ $page->title }}" />
-    <meta name="twitter:description" content="{{ $page->description }}" />
-    <meta name="twitter:image" content="{{ asset('img/meta.jpg') }}" />
+    <meta name="twitter:title" content="{{ $page->meta['twitter_title'] ?: $page->title }}" />
+    <meta name="twitter:description" content="{{ $page->meta['twitter_description'] ?: $page->meta_description }}" />
+    <meta name="twitter:image" content="{{ $page->meta['twitter_image'] ?: ($page->featured_image ?: asset('img/placeholder.png')) }}"/>
 @elseif(!empty($selectedPost))
     <title>{{$selectedPost->title}} | Full Stack World</title>
     <meta name="description" content="{{ $selectedPost->meta['meta_description'] }}" />
