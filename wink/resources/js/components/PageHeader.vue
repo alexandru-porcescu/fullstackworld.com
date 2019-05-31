@@ -3,6 +3,7 @@
     export default {
         computed: {
             hideLogoOnSmallScreens() {
+                console.log(Wink.author)
                 return this.$slots['left-side']
             }
         }
@@ -36,18 +37,31 @@
                             <router-link :to="{name:'team-edit', params:{id: Wink.author.id}}" class="no-underline text-text-color font-sans hover:text-primary w-full block py-2 px-4 border-b border-very-light">
                                 Profile
                             </router-link>
-                            <router-link to="/posts" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    to="/posts"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Posts
                             </router-link>
-                            <router-link to="/pages" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    v-if="Wink.author.is_admin"
+                                    to="/pages"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Pages
                             </router-link>
 
-                            <router-link to="/tags" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                to="/tags"
+                                class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Tags
                             </router-link>
 
-                            <router-link to="/team" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    v-if="Wink.author.is_admin"
+                                    to="/team"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
                                 Team
                             </router-link>
                             <a :href="'/'+Wink.path+'/logout'" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4 border-t border-very-light">

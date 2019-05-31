@@ -17,6 +17,17 @@ const router = new VueRouter({
     base: '/' + Wink.path,
 });
 
+router.beforeEach((to, from, next) => {
+    console.log(to);
+    var restrictedRoutes = ['team', 'tag-new', 'team-new', 'pages', 'page-new', 'page-edit'];
+    if (!Wink.author.is_admin && restrictedRoutes.includes(to.name)) {
+        //if (!store.state.accessToken) {
+            next('/');
+        //}
+    }
+    next();
+});
+
 Vue.component('page-header', require('./components/PageHeader').default);
 Vue.component('preloader', require('./partials/Preloader').default);
 
