@@ -19,13 +19,13 @@ return [
         'enabled' => true,
 
         // In case of translations just add translatable string
-        'body' => 'Sometimes We\'re using cookies on this website. Would you like to share some?',
+        'body' => 'We\'re using cookies on this website. Would you like to share some?',
 
         // In case of translations just add translatable string
         'button' => 'YES, I\'m fine!',
 
         // Options[is-success, is-warning, is-danger, is-primary, is-dark, is-white, ..]
-        'background-class' => 'is-light',
+        'background-class' => 'is-grey-lighter',
 
         // Options[is-success, is-warning, is-danger, is-primary, is-dark, is-white, ..]
         'button-class' => 'is-primary',
