@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Wink\WinkPage;
 use Wink\WinkTag;
 use Carbon\Carbon;
+use Wink\WinkPage;
 use Wink\WinkPost;
 use App\Mail\CommandFinished;
 use Illuminate\Console\Command;

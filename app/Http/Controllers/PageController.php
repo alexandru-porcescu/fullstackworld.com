@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Wink\WinkPage;
 
 class PageController extends Controller
@@ -11,7 +10,7 @@ class PageController extends Controller
     {
         $page = WinkPage::where('slug', $slug)->first();
 
-        if (!$page) {
+        if (! $page) {
             return abort(404);
         }
 
