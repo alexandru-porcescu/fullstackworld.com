@@ -2,7 +2,7 @@
 
 return [
 
-    /**
+    /*
      * Bulma column size classes
      * https://bulma.io/documentation/columns/sizes
      * is-full is-full-mobile is-full-tablet, or other bulma classes
@@ -10,8 +10,7 @@ return [
 
     'notification_container' => 'column is-one-quarter is-full-touch is-one-quarter-widescreen',
 
-
-    /**
+    /*
      * Cookie related classes
      */
     'cookie' => [
@@ -30,5 +29,5 @@ return [
 
         // Options[is-success, is-warning, is-danger, is-primary, is-dark, is-white, ..]
         'button-class' => 'is-primary',
-    ]
+    ],
 ];
