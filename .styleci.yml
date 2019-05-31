@@ -1,0 +1,13 @@
+preset: laravel
+
+finder:
+  exclude:
+    - "public"
+    - "resources"
+    - "tests"
+    - "node_modules"
+    - "storage"
+    - "vendor"
+    - "nova"
+    - "reports"
+    - "build"

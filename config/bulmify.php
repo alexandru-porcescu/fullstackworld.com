@@ -17,5 +17,5 @@ return [
         // is-success, is-warning, is-danger, is-primary, is-dark, is-white ...
 
         'button-text' => 'Okay',
-    ]
+    ],
 ];

@@ -6,7 +6,7 @@ use Wink\WinkPost;
 
 class PostsController extends Controller
 {
-    function index()
+    public function index()
     {
         $posts = WinkPost::whereHas('tags', function ($query) {
             $query->where('name', 'Journal');
@@ -18,23 +18,23 @@ class PostsController extends Controller
         return view('frontend.posts.index', compact('posts'));
     }
 
-    function post($slug)
+    public function post($slug)
     {
         $selectedPost = WinkPost::with('tags')
             ->live()
             ->where('slug', $slug)
             ->first();
 
-        if (!$selectedPost) {
+        if (! $selectedPost) {
             return abort(404);
         }
 
         $postType = $selectedPost->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
         $tags = $selectedPost->tags->pluck('name')->toArray();
 
-        $similarPosts = WinkPost::whereHas('tags', function ($query) use($tags) {
-                $query->whereIn('name', $tags);
-            })
+        $similarPosts = WinkPost::whereHas('tags', function ($query) use ($tags) {
+            $query->whereIn('name', $tags);
+        })
             ->where('id', '<>', $selectedPost->id)
             ->live()
             ->orderBy('publish_date', 'DESC')

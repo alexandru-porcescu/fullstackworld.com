@@ -32,7 +32,7 @@ class MigrateCommand extends Command
     public function handle()
     {
         $shouldCreateNewAuthor =
-            ! Schema::connection(config('wink.database_connection'))->hasTable('wink_authors') ||
+            ! Schema::connection(config('wink.database_connection'))->hasTable('authors') ||
             ! WinkAuthor::count();
 
         $this->call('migrate', [
