@@ -3,7 +3,6 @@
     export default {
         computed: {
             hideLogoOnSmallScreens() {
-                console.log(Wink.author)
                 return this.$slots['left-side']
             }
         }
@@ -19,7 +18,6 @@
                         <router-link to="/" class="no-underline text-text-color">
                             <img width="100" src="/img/logo/main.png" class="logo" alt="Fullstackworld">
                         </router-link>
-
                     </h3>
 
                     <slot name="left-side"></slot>
