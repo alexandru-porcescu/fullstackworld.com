@@ -115,7 +115,7 @@
                         </select>
                     </div>
 
-                    <div class="flex items-center justify-between mt-3">
+                    <div class="flex items-center justify-between mt-3" v-if="Wink.author.is_admin">
                         <span>Author</span>
                         <select name="author"
                                 class="border border-lighter rounded w-3/5 focus:outline-none appearance-none py-1 px-3"

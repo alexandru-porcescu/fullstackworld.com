@@ -20,8 +20,13 @@ class PostsController extends Controller
 
     public function post($slug)
     {
-        $selectedPost = WinkPost::with('tags')
-            ->live()
+        $query = WinkPost::with('tags');
+
+        if (! request('draft')) {
+            $query = $query->live();
+        }
+
+        $selectedPost = $query
             ->where('slug', $slug)
             ->first();
 

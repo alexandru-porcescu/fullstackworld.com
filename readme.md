@@ -14,7 +14,7 @@
 Welcome to the [fullstackworld.com](https://fullstackworld.com) codebase. We are so excited to have you here.
 
 ## What is FullStackWorld anyway?
-[FullStackWorld](https://fullstackworld.com) is a platform developers help each others with the stories. We believe web is becoming more & more full stack development, so instead of World Wide Web why not Full Stack World? We consider ourselves a community driven dialogue in the pursuit of common goal for everyone.
+[FullStackWorld](https://fullstackworld.com) is a platform where developers help each others with their stories. We believe web development is becoming more & more full stack development, so instead of World Wide Web why not Full Stack World? We consider ourselves a community driven dialogue in the pursuit of common goal for everyone.
 
 From beginners to experts, everyone is welcome to find their place in the community.  
 
@@ -25,7 +25,7 @@ Below requirements and quick-start guide is based on standards which we recommen
 
 ### Prerequisite
 
-- `PHP V7.2+` installed on your system
+- `PHP V7.3+` installed on your system
 - [Homestead](https://laravel.com/docs/5.8/homestead#installation-and-setup) prerequisite must be matching already.
 
 ### Steps

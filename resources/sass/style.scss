@@ -1,6 +1,6 @@
 body {
   font-size: 1.2rem;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   a {
     color: #3EAF7C;
   }
@@ -19,7 +19,8 @@ body {
 }
 .navbar
 {
-  background-color: transparent;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 0 #f5f5f5;
 }
 
 footer
@@ -114,20 +115,8 @@ footer
     }
   }
 }
-.main-nav {
-  border-color: #e9ecef;
-  border-style: solid;
-  margin-bottom: 2rem!important;
-  border-width: 0;
-  //border-top-width: 2px;
-  //border-top-color: #79689B;
-  border-bottom-width: 1px;
-  padding-bottom: 1rem;
-  background-color: #ffffff;
-  box-shadow: 1px 0 2px 2px rgba(42,42,42,.25);
-}
 .navbar .navbar-brand img.logo {
-  max-height: 5rem;
+  max-height: 4rem;
 }
 .title-box {
   border-bottom: 0.5px solid rgba(42, 42, 42, 0.25);
@@ -135,9 +124,6 @@ footer
   .title {
     margin: 0;
   }
-}
-section.bd-tws-home {
-  padding-top: 0;
 }
 
 .tags {
@@ -230,8 +216,19 @@ footer {
   margin-right: 0.4rem;
 }
 .page-content {
-  min-height: 32.5rem;
+  min-height: 27.5rem;
 }
 .is-grey-lighter{
   background-color: #e1e1e1;
+}
+code {
+  color:#79689B;
+}
+.navbar-item img {
+  max-height: 2rem;
+}
+.login-image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0px!important;
 }
