@@ -49,12 +49,13 @@
                 </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-arrowless" href="{{ route('blog') }}">
+                    <a class="navbar-link is-arrowless" href="{{auth('wink')->check() ? route('blog') : '/wink/login' }}">
                         <figure class="image is-32x32">
                             <img class="is-rounded" src="https://res.cloudinary.com/practicaldev/image/fetch/s--qWQ9Lcyk--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/157059/b5026b91-4cc9-42d1-8482-2cb089c251da.jpg">
                         </figure>
                     </a>
                     <div class="navbar-dropdown is-boxed">
+                        @if(auth('wink')->check())
                         <a class="navbar-item" href="/wink/team/2aa04e3a-eb4a-404b-b237-207758950705">
                             Profile
                         </a>
@@ -72,6 +73,7 @@
                         <a class="navbar-item" href="/wink/logout">
                             Logout
                         </a>
+                        @endif
                     </div>
                 </div>
             </div>
