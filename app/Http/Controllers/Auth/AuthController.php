@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Wink\WinkAuthor;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
-use Wink\WinkAuthor;
 
 class AuthController extends Controller
 {
@@ -19,7 +19,7 @@ class AuthController extends Controller
      */
     public function redirectToProvider($provider)
     {
-        if (!in_array($provider, ['github', 'twitter'])) {
+        if (! in_array($provider, ['github', 'twitter'])) {
             return Redirect::to('/');
         }
 
@@ -33,7 +33,7 @@ class AuthController extends Controller
      */
     public function handleProviderCallback($provider)
     {
-        if (!in_array($provider, ['github', 'twitter'])) {
+        if (! in_array($provider, ['github', 'twitter'])) {
             return Redirect::to('/');
         }
 
@@ -51,7 +51,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Return author if exists; create and return if doesn't
+     * Return author if exists; create and return if doesn't.
      *
      * @param $socialUser
      * @return WinkAuthor
@@ -73,12 +73,11 @@ class AuthController extends Controller
             'bio' => 'My journey starts here!',
             'email' => $socialUser->email,
             'avatar' => $socialUser->avatar,
-            'password' => $password
+            'password' => $password,
         ]);
 
         // ToDo: Send Welcome Email
 
         return $author;
-
     }
 }

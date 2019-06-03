@@ -22,7 +22,7 @@ class PostsController extends Controller
     {
         $query = WinkPost::with('tags');
 
-        if (!request('draft')) {
+        if (! request('draft')) {
             $query = $query->live();
         }
 
