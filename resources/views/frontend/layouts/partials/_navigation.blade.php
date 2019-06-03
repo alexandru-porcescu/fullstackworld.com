@@ -49,30 +49,43 @@
                 </div>
 
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-arrowless" href="{{auth('wink')->check() ? route('blog') : '/wink/login' }}">
+                    <a class="navbar-link" href="#">
+                        <i class="fas fa-user-edit is-info"></i>&nbsp;&nbsp;Authors
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#">
+                            <i class="fas fa-medal has-text-orange"></i>&nbsp;Most Active
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless" href="{{auth('wink')->check() ? '/wink/posts' : 'javascript:void(0)' }}">
                         <figure class="image is-32x32">
-                            <img class="is-rounded" src="https://res.cloudinary.com/practicaldev/image/fetch/s--qWQ9Lcyk--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://thepracticaldev.s3.amazonaws.com/uploads/user/profile_image/157059/b5026b91-4cc9-42d1-8482-2cb089c251da.jpg">
+                            <img
+                                class="is-rounded"
+                                src="{{auth('wink')->check() ? auth('wink')->user()->avatar : asset('img/all/user-placeholder.png') }}"
+                            >
                         </figure>
                     </a>
                     <div class="navbar-dropdown is-boxed">
                         @if(auth('wink')->check())
-                        <a class="navbar-item" href="/wink/team/2aa04e3a-eb4a-404b-b237-207758950705">
-                            Profile
-                        </a>
+                        <a class="navbar-item" href="/wink/team/{{auth('wink')->user()->id}}">Profile</a>
                         <hr class="navbar-divider">
-                        <a class="navbar-item" href="/wink/posts">
-                            Posts
-                        </a>
-                        <a class="navbar-item" href="/wink/tags">
-                            Tags
-                        </a>
-                        <a class="navbar-item" href="/stats">
-                            Stats
-                        </a>
+                        <a class="navbar-item" href="/wink/posts">Posts</a>
+                        <a class="navbar-item" href="/wink/tags">Tags</a>
+                        <a class="navbar-item" href="/stats">Stats</a>
                         <hr class="navbar-divider">
                         <a class="navbar-item" href="/wink/logout">
                             Logout
                         </a>
+                        @else
+                            <a class="navbar-item open-modal" href="javascript:void(0)" data-modal-id="#login-modal">
+                                Login
+                            </a>
+                            <a class="navbar-item open-modal" href="javascript:void(0)" data-modal-id="#register-modal">
+                                Signup
+                            </a>
                         @endif
                     </div>
                 </div>

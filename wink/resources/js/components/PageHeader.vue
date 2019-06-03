@@ -15,9 +15,9 @@
             <div class="flex items-center py-4">
                 <div class="flex items-center mr-auto h-8">
                     <h3 class="mr-5 font-semibold font-serif" :class="{'hidden': hideLogoOnSmallScreens, 'sm:block': hideLogoOnSmallScreens}">
-                        <router-link to="/" class="no-underline text-text-color">
+                        <a href="/" class="no-underline text-text-color">
                             <img width="100" src="/img/logo/main.png" class="logo" alt="Fullstackworld">
-                        </router-link>
+                        </a>
                     </h3>
 
                     <slot name="left-side"></slot>

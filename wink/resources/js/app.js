@@ -20,9 +20,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
     var restrictedRoutes = ['team', 'tag-new', 'team-new', 'pages', 'page-new', 'page-edit'];
     if (!Wink.author.is_admin && restrictedRoutes.includes(to.name)) {
-        //if (!store.state.accessToken) {
-            next('/');
-        //}
+        next('/');
     }
     next();
 });

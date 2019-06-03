@@ -1,3 +1,4 @@
+@include('frontend.layouts.partials._modals')
 <footer class="section">
     <div class="container">
 

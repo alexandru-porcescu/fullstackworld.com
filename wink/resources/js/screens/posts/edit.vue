@@ -244,6 +244,16 @@
                 this.publishingModalShown = true;
             },
 
+            viewPost() {
+                let redirectUrl = '/post/'+this.form.slug
+
+                if (!this.form.published) {
+                    redirectUrl += '?draft=1'
+                }
+
+                window.open(redirectUrl, '_blank')
+            },
+
 
             /**
              * Open the featured image modal.
@@ -360,6 +370,8 @@
             <div class="flex items-center" v-if="ready && entry" slot="right-side">
                 <button class="py-1 px-2 btn-primary text-sm mr-6" @click="publishingModal" v-if="!form.published">Publish</button>
                 <button class="py-1 px-2 btn-primary text-sm mr-6" @click="publishingModal" v-if="form.published">Update</button>
+                <button class="py-1 px-2 btn-light text-sm mr-6" @click="viewPost" v-if="!form.published && this.id != 'new'">Preview</button>
+                <button class="py-1 px-2 btn-light text-sm mr-6" @click="viewPost" v-if="form.published">View</button>
 
                 <dropdown class="relative">
                     <button slot="trigger" class="focus:outline-none text-light hover:text-primary h-8">
