@@ -25,7 +25,7 @@ Below requirements and quick-start guide is based on standards which we recommen
 
 ### Prerequisite
 
-- `PHP V7.2+` installed on your system
+- `PHP V7.3+` installed on your system
 - [Homestead](https://laravel.com/docs/5.8/homestead#installation-and-setup) prerequisite must be matching already.
 
 ### Steps

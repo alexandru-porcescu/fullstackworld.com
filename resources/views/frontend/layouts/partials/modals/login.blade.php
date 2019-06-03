@@ -15,8 +15,8 @@
                 <h2 class="title">Login to FullStackWorld</h2>
                 <p>We're a community of developers who wish to share stories with others.</p>
                 <p style="margin-bottom: 2rem;">
-                    <a class="button is-info is-rounded"><i class="fab fa-twitter"></i>&nbsp; Twitter</a>&nbsp;&nbsp;
-                    <a class="button is-darka is-rounded"><i class="fab fa-github"></i>&nbsp; Github</a>
+                    <!--a class="button is-info is-rounded" href="/auth/twitter"><i class="fab fa-twitter"></i>&nbsp; Twitter</a>&nbsp;&nbsp;-->
+                    <a class="button is-darka is-rounded" href="/auth/github"><i class="fab fa-github"></i>&nbsp; Github</a>
                 </p>
             </div>
 
