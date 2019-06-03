@@ -22,8 +22,8 @@ class TagsController
 
         $entries = $query->withCount('posts');
 
-        if (!auth('wink')->user()->is_admin) {
-            $entries = $query->withCount(['posts' => function($query) {
+        if (! auth('wink')->user()->is_admin) {
+            $entries = $query->withCount(['posts' => function ($query) {
                 $query->where('author_id', auth('wink')->user()->id);
             }]);
         }
