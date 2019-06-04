@@ -130,7 +130,6 @@ footer
   max-height: 5rem;
 }
 .title-box {
-  border-bottom: 0.5px solid rgba(42, 42, 42, 0.25);
   margin: 3em 0;
   .title {
     margin: 0;
@@ -205,7 +204,6 @@ footer {
   width: 100%;
   background-color: #fff;
   border: 1px solid #999;
-  border-top: none;
 }
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
   cursor: pointer;
@@ -234,4 +232,21 @@ footer {
 }
 .is-grey-lighter{
   background-color: #e1e1e1;
+}
+code {
+  color:#79689B;
+}
+.navbar-item img {
+  max-height: 2rem;
+}
+.login-image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0px!important;
+}
+#main-search {
+  width: 23rem;
+}
+.is-pointer {
+  cursor: pointer;
 }

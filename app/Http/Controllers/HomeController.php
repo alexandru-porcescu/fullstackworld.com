@@ -16,6 +16,12 @@ class HomeController extends Controller
         */
 
         $blockAdsense = true;
+
+        $topPosts = WinkPost::live()
+            ->orderBy('publish_date', 'DESC')
+            ->limit(5)
+            ->get();
+
         $laravelPosts = WinkPost::whereHas('tags', function ($query) {
             $query->where('slug', 'laravel');
         })
@@ -40,6 +46,6 @@ class HomeController extends Controller
             ->limit(6)
             ->get();
 
-        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense'));
+        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense', 'topPosts'));
     }
 }
