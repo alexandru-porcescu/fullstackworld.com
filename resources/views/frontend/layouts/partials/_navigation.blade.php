@@ -74,7 +74,9 @@
                         <hr class="navbar-divider">
                         <a class="navbar-item" href="/wink/posts">Posts</a>
                         <a class="navbar-item" href="/wink/tags">Tags</a>
+                        @if(auth('wink')->user()->is_admin)
                         <a class="navbar-item" href="/stats">Stats</a>
+                        @endif
                         <hr class="navbar-divider">
                         <a class="navbar-item" href="/wink/logout">
                             Logout
