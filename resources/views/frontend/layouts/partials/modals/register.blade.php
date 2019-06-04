@@ -16,7 +16,7 @@
                 <p>We're a community of developers who wish to share stories with others.</p>
                 <p style="margin-bottom: 2rem;">
                     <!--a class="button is-info is-rounded" href="/auLogin th/twitter"><i class="fab fa-twitter"></i>&nbsp; Twitter</a>&nbsp;&nbsp;-->
-                    <a class="button is-dark is-rounded is-large" href="/auth/github"><i class="fab fa-github"></i>&nbsp; Login with GitHub</a>
+                    <a class="button is-dark is-rounded is-large" href="/auth/github"><i class="fab fa-github"></i>&nbsp; Signup with GitHub</a>
                 </p>
             </div>
 
