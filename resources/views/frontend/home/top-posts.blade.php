@@ -84,7 +84,7 @@
             <figure class="image is-2by1">
                 <img src="{{$topPosts[4]->featured_image ? $topPosts[4]->featured_image : asset('img/placeholder.png')}}" alt="{{$topPosts[4]->title}}">
             </figure>
-            <h3 class="title"><a href="{{route('post', $topPosts[4]->slug)}}">{{$topPosts[4]->title}}</a></h3>
+            <h3 class="title mt-1"><a href="{{route('post', $topPosts[4]->slug)}}">{{$topPosts[4]->title}}</a></h3>
             <p class="subtitle is-5 has-text-grey-dark">
                 {{$topPosts[4]->excerpt}}
             </p>
