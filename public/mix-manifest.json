@@ -1,6 +1,4 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/bulma.css": "/css/bulma.css",
-    "/css/style.css": "/css/style.css",
-    "/css/normalize.css": "/css/normalize.css"
+    "/css/app.css": "/css/app.css"
 }

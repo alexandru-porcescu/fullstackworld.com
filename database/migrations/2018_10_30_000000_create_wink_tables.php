@@ -52,6 +52,7 @@ class CreateWinkTables extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->text('bio');
+            $table->boolean('is_admin')->default(false);
             $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->text('meta')->nullable();

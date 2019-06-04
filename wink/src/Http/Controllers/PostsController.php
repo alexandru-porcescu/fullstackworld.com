@@ -27,6 +27,8 @@ class PostsController
             $q->whereHas('tags', function ($query) use ($value) {
                 $query->where('id', $value);
             });
+        })->when(! auth('wink')->user()->is_admin, function ($q, $value) {
+            $q->whereAuthorId(auth('wink')->user()->id);
         })
             ->orderBy('created_at', 'DESC')
             ->with('tags')

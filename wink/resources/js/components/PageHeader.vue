@@ -12,13 +12,12 @@
 <template>
     <div class="border-b border-very-light mb-10">
         <div class="container">
-            <div class="flex items-center py-2">
+            <div class="flex items-center py-4">
                 <div class="flex items-center mr-auto h-8">
                     <h3 class="mr-5 font-semibold font-serif" :class="{'hidden': hideLogoOnSmallScreens, 'sm:block': hideLogoOnSmallScreens}">
-                        <router-link to="/" class="no-underline text-text-color">
+                        <a href="/" class="no-underline text-text-color">
                             <img width="100" src="/img/logo/main.png" class="logo" alt="Fullstackworld">
-                        </router-link>
-
+                        </a>
                     </h3>
 
                     <slot name="left-side"></slot>
@@ -36,18 +35,31 @@
                             <router-link :to="{name:'team-edit', params:{id: Wink.author.id}}" class="no-underline text-text-color font-sans hover:text-primary w-full block py-2 px-4 border-b border-very-light">
                                 Profile
                             </router-link>
-                            <router-link to="/posts" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    to="/posts"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Posts
                             </router-link>
-                            <router-link to="/pages" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    v-if="Wink.author.is_admin"
+                                    to="/pages"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Pages
                             </router-link>
 
-                            <router-link to="/tags" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                to="/tags"
+                                class="no-underline text-text-color hover:text-primary w-full block py-2 px-4"
+                            >
                                 Tags
                             </router-link>
 
-                            <router-link to="/team" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
+                            <router-link
+                                    v-if="Wink.author.is_admin"
+                                    to="/team"
+                                    class="no-underline text-text-color hover:text-primary w-full block py-2 px-4">
                                 Team
                             </router-link>
                             <a :href="'/'+Wink.path+'/logout'" class="no-underline text-text-color hover:text-primary w-full block py-2 px-4 border-t border-very-light">
