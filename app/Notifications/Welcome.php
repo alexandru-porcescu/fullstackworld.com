@@ -39,7 +39,8 @@ class Welcome extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->greeting('Hey!')
+                    ->subject('Welcome to FullStackWorld!')
+                    ->greeting('Hey '.$this->author->name.'!')
                     ->line('Welcome to FullStackWorld - we\'re a community of developers who wish to share stories with others.')
                     ->action('Your Profile', url('/wink/team/'.$this->author->slug))
                     ->line('Any questions, just reply to this email and we’ll get right back to you!');
