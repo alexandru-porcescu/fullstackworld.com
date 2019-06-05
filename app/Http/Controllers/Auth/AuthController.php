@@ -77,7 +77,7 @@ class AuthController extends Controller
             'password' => $password,
         ]);
 
-        $author->notify(new Welcome($author));
+        //$author->notify(new Welcome($author));
 
         return $author;
     }
