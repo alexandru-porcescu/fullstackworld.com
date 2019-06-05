@@ -85,6 +85,8 @@
             </div>
 
             <button type="submit" class="btn-primary">Login</button>
+
+            <a href="/auth/github" class="btn-light">Login With Github</a>
         </form>
     </div>
 </div>
