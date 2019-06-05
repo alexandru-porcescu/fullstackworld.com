@@ -37,9 +37,9 @@
                 </article>
             </div>
             <div class="tile is-parent">
-                <article class="tile is-child notification is-link">
+                <article class="tile is-child notification is-grey-lighter">
                     <h3 class="title"><a href="{{route('post', $topPosts[2]->slug)}}">{{$topPosts[2]->title}}</a></h3>
-                    <p class="subtitle is-5 has-text-light">
+                    <p class="subtitle is-5 has-text-lighter">
                         {{$topPosts[2]->excerpt}}
                     </p>
                     <div class="media">
