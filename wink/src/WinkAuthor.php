@@ -3,9 +3,12 @@
 namespace Wink;
 
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class WinkAuthor extends AbstractWinkModel implements Authenticatable
 {
+    use Notifiable;
+
     /**
      * The attributes that aren't mass assignable.
      *
