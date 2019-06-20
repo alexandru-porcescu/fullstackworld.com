@@ -46,7 +46,7 @@
             <div class="navbar-end ">
 
                 <div class="navbar-item">
-                    <a class="button is-rounded" target="_blank"><i class="fab fa-github"></i>&nbsp;Contribute on GitHub</a>
+                    <a class="button is-rounded" target="_blank" href="https://github.com/fullstackworld/fullstackworld.com"><i class="fab fa-github"></i>&nbsp;Contribute on GitHub</a>
                 </div>
 
             </div>
