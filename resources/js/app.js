@@ -1,31 +1,21 @@
-window.$ = window.jQuery = require('jquery');
+require('./bootstrap');
 
-import hljs from 'highlight.js/lib/highlight';
-import javascript from 'highlight.js/lib/languages/javascript';
-import php from 'highlight.js/lib/languages/php';
-import python from 'highlight.js/lib/languages/python';
-import sql from 'highlight.js/lib/languages/sql';
-import bash from 'highlight.js/lib/languages/bash';
-hljs.registerLanguage('javascript', javascript);
-hljs.registerLanguage('php', php);
-hljs.registerLanguage('python', python);
-hljs.registerLanguage('sql', sql);
-hljs.registerLanguage('bash', bash);
-hljs.initHighlightingOnLoad();
+import Vue from "vue";
 
-function toggleModalClasses(event) {
-    var modalId = event.currentTarget.dataset.modalId;
-    var modal = $(modalId);
-    modal.toggleClass('is-active');
-    $('html').toggleClass('is-clipped');
-};
+import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
+import VueGoodshareTwitter from "vue-goodshare/src/providers/Twitter.vue";
+import VueGoodshareLinkedIn from "vue-goodshare/src/providers/LinkedIn.vue";
+import VueGoodshareWhatsApp from "vue-goodshare/src/providers/WhatsApp.vue";
+import VueGoodshareReddit from "vue-goodshare/src/providers/Reddit.vue";
 
-$('.open-modal').click(toggleModalClasses);
 
-$('.close-modal').click(toggleModalClasses);
-
-$(document).keyup(function(e) {
-    if (e.keyCode === 27) {
-        $('.modal').removeClass('is-active');
+const app = new Vue({
+    el: "#app",
+    components: {
+        VueGoodshareFacebook,
+        VueGoodshareTwitter,
+        VueGoodshareWhatsApp,
+        VueGoodshareLinkedIn,
+        VueGoodshareReddit,
     }
 });

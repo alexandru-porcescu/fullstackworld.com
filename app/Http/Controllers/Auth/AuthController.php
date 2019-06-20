@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Notifications\Welcome;
 use Wink\WinkAuthor;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
@@ -76,7 +77,7 @@ class AuthController extends Controller
             'password' => $password,
         ]);
 
-        // ToDo: Send Welcome Email
+        $author->notify(new Welcome($author));
 
         return $author;
     }
