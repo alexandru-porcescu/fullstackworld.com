@@ -1,5 +1,5 @@
 <nav class="navbar is-fixed-bottom footer-nav">
-    <div class="container">
+    <div class="container is-widescreen is-mobile">
         <div class="navbar-brand">
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                data-target="socialShareMenu">

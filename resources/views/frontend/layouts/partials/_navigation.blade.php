@@ -1,6 +1,6 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 
-    <div class="container is-widescren">
+    <div class="container is-widescreen is-mobile">
     <div class="navbar-brand">
         <a href="/" class="navbar-item router-link-exact-active router-link-active">
             <img src="{{ asset('img/logo/main.png') }}" class="logo" alt="Fullstackworld">

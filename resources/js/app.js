@@ -1,5 +1,3 @@
-require('./bootstrap');
-
 import Vue from "vue";
 
 import VueGoodshareFacebook from "vue-goodshare/src/providers/Facebook.vue";
