@@ -2,19 +2,11 @@
 <script src="{{ asset('js/jquery-3.4.0.min.js') }}"></script>
 
 <script>
-    (function() {
-        var burger = document.querySelector('.navbar-burger');
-        var menu = document.querySelector('.navbar-menu');
-        burger.addEventListener('click', function() {
-            burger.classList.toggle('is-active');
-            menu.classList.toggle('is-active');
-        });
-
-    })();
-
+    $('.navbar-burger').click(function () {
+        $(this).toggleClass();
+        $('#'+$(this).data('target')).toggleClass();
+    });
 </script>
-
-
 
 @include('frontend.layouts.partials._algolia')
 @include('frontend.layouts.partials._hotjar')
