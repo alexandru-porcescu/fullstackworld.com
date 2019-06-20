@@ -3,8 +3,9 @@
         <div class="navbar-brand">
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                data-target="socialShareMenu">
-                <span class="fa fa-share-alt">
-                </span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
         </div>
         <div class="navbar-menu" id="socialShareMenu">
