@@ -53,12 +53,3 @@
         </div>
     </div>
 </nav>
-<style>
-    .navbar .container {
-        display: flex;
-    }
-    .navbar-item {
-        display: flex;
-        align-items: center;
-    }
-</style>
