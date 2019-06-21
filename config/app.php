@@ -184,6 +184,7 @@ return [
 
         \Laravel\Socialite\SocialiteServiceProvider::class,
 
+        \CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
     ],
 
     /*

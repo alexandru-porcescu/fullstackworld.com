@@ -10,6 +10,13 @@
         </div>
         <div class="navbar-menu" id="socialShareMenu">
             <div class="navbar-start">
+                @if($selectedPost)
+                    <div class="navbar-item">
+                        <span class="button is-outlined" style="height: 2.7rem">
+                            <i class="far fa-eye"></i>&nbsp;{{views($selectedPost)->count()}}
+                        </span>
+                    </div>
+                @endif
                 <div class="navbar-item">
                     <vue-goodshare-facebook
                             button_design="outline"
@@ -47,7 +54,8 @@
             <div class="navbar-end ">
 
                 <div class="navbar-item">
-                    <a class="button is-rounded" target="_blank" href="https://github.com/fullstackworld/fullstackworld.com"><i class="fab fa-github"></i>&nbsp;Contribute on GitHub</a>
+                    <a class="button is-primary is-rounded is-outlined" target="_blank" href="https://github.com/fullstackworld/fullstackworld.com">
+                        <i class="fab fa-github"></i>&nbsp;Contribute on GitHub</a>
                 </div>
 
             </div>
