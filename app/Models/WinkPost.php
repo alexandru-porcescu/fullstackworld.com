@@ -37,7 +37,7 @@ class WinkPost extends WinkPostOriginal
 
     public static function getPostsByTag($tagSlug, $limit = 6)
     {
-        return WinkPost::whereHas('tags', function ($query) use($tagSlug) {
+        return self::whereHas('tags', function ($query) use ($tagSlug) {
             $query->where('slug', $tagSlug);
         })
             ->live()
