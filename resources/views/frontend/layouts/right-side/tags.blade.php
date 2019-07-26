@@ -1,7 +1,7 @@
 <div class="tags">
     @foreach($tags as $tag)
-        <a href="{{ route('tags', $tag->slug) }}">
-                <span class="tag is-primary is-large">{{$tag->name}}({{$tag->posts_count}})</span>
-        </a>
+        <span class="tag is-grey is-medium has-text-dark">
+                <a href="{{ route('tags', $tag->slug) }}">{{$tag->name}}({{$tag->posts_count}})</a>
+        </span>
     @endforeach
 </div>

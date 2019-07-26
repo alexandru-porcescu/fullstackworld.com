@@ -33,7 +33,7 @@ class LoginController
 
         $request->session()->invalidate();
 
-        return redirect()->route('wink.auth.login')->with('loggedOut', true);
+        return redirect()->route('home')->with('loggedOut', true);
     }
 
     /**

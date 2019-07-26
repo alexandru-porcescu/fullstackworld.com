@@ -1,3 +1,4 @@
+@include('frontend.layouts.partials._modals')
 <footer class="section">
     <div class="container">
 
@@ -36,7 +37,7 @@
 
         <div class="content has-text-centered">
             <a href="/page/about" class="is-small has-text-grey">About</a> |
-            <a href="/page/contact" class="is-small has-text-grey">Contact</a> |
+            <a href="/page/imprint" class="is-small has-text-grey">Imprint</a> |
             <a href="/page/code-of-conduct" class="is-small has-text-grey">Code of Conduct</a> |
             <a href="/page/faq" class="is-small has-text-grey">FAQ</a> |
             <a href="/page/terms-of-use" class="is-small has-text-grey">Terms of Use</a>

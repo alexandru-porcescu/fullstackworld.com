@@ -8,12 +8,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $blockAdsense = false;
+        $blockAdsense = true;
+
+        $topPosts = WinkPost::live()
+            ->orderBy('publish_date', 'DESC')
+            ->limit(5)
+            ->get();
 
         $laravelPosts = WinkPost::getPostsByTag('laravel');
         $vuejsPosts = WinkPost::getPostsByTag('vuejs');
         $angularPosts = WinkPost::getPostsByTag('angular');
 
-        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense'));
+        return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense', 'topPosts'));
     }
 }

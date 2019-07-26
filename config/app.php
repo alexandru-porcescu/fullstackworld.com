@@ -182,6 +182,9 @@ return [
 
         \Gliterd\BackblazeB2\BackblazeB2ServiceProvider::class,
 
+        \Laravel\Socialite\SocialiteServiceProvider::class,
+
+        \CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
     ],
 
     /*
@@ -233,6 +236,8 @@ return [
         'Sentry' => Sentry\Laravel\Facade::class,
 
         'Feeds'    => willvincent\Feeds\Facades\FeedsFacade::class,
+
+        'Socialite' => \Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
