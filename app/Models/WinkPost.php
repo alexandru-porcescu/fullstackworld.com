@@ -34,4 +34,15 @@ class WinkPost extends WinkPostOriginal
 
         return $data;
     }
+
+    public static function getPostsByTag($tagSlug, $limit = 6)
+    {
+        return WinkPost::whereHas('tags', function ($query) use($tagSlug) {
+            $query->where('slug', $tagSlug);
+        })
+            ->live()
+            ->orderBy('publish_date', 'DESC')
+            ->limit($limit)
+            ->get();
+    }
 }

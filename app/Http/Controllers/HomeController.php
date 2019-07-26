@@ -2,43 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkPost;
-use willvincent\Feeds\Facades\FeedsFacade;
+use App\Models\WinkPost;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        /*
-        $jobs = FeedsFacade::make('https://larajobs.com/feed');
-        $t = $jobs->get_items()[0];
-        dd([$t->get_title(), $t->get_id(), $t->get_date(), $t->get_author(), $t->get_permalink()]);
-        */
+        $blockAdsense = false;
 
-        $blockAdsense = true;
-        $laravelPosts = WinkPost::whereHas('tags', function ($query) {
-            $query->where('slug', 'laravel');
-        })
-            ->live()
-            ->orderBy('publish_date', 'DESC')
-            ->limit(6)
-            ->get();
-
-        $vuejsPosts = WinkPost::whereHas('tags', function ($query) {
-            $query->where('slug', 'vuejs');
-        })
-            ->live()
-            ->orderBy('publish_date', 'DESC')
-            ->limit(6)
-            ->get();
-
-        $angularPosts = WinkPost::whereHas('tags', function ($query) {
-            $query->where('slug', 'angular');
-        })
-            ->live()
-            ->orderBy('publish_date', 'DESC')
-            ->limit(6)
-            ->get();
+        $laravelPosts = WinkPost::getPostsByTag('laravel');
+        $vuejsPosts = WinkPost::getPostsByTag('vuejs');
+        $angularPosts = WinkPost::getPostsByTag('angular');
 
         return view('frontend.home.index', compact('laravelPosts', 'vuejsPosts', 'angularPosts', 'blockAdsense'));
     }
