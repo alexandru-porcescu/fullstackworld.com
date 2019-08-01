@@ -1,7 +1,9 @@
 @if(app()->environment('production'))
-    <script src="{{ asset('js/algolia/algoliasearch.min.js') }}"></script>
     <script src="{{ asset('js/algolia/autocomplete.min.js') }}"></script>
     <script>
+        $.getJSON('http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback', function(data) {
+            //data is the JSON string
+        });
         var client = algoliasearch('{{config('scout.algolia.id')}}', '{{config('scout.algolia.secret')}}');
         var index = client.initIndex('posts');
         autocomplete('#main-search', { hint: false }, [

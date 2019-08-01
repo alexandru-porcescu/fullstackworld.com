@@ -23,3 +23,5 @@
 @include('bulma::notifications')
 
 @yield('scripts')
+
+<!--script src="{{ asset('js/app.js') }}"></script-->
