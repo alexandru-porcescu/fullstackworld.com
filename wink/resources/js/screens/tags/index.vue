@@ -42,7 +42,7 @@
     <div>
         <page-header>
             <div slot="right-side">
-                <router-link :to="{name:'tag-new'}" class="py-1 px-2 btn-primary text-sm">
+                <router-link :to="{name:'tag-new'}" class="py-1 px-2 btn-primary text-sm" v-if="Wink.author.is_admin">
                     New Tag
                 </router-link>
             </div>

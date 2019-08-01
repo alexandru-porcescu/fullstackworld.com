@@ -24,12 +24,18 @@
                             <div class="tags">
                                 @foreach($selectedPost->tags as $tag)
                                     @if($postType != 'Journal')
-                                        <span class="tag is-primary is-large">{{$tag->name}}</span>
+                                        <span class="tag is-grey is-medium has-text-dark">
+                                            <a href="{{ route('tags', $tag->slug) }}">
+                                                {{$tag->name}}
+                                            </a>
+                                        </span>
                                     @endif
                                 @endforeach
                             </div>
 
                         </div>
+
+                        @include('frontend.layouts.partials.social_share')
 
                     </div>
                 </div>
@@ -40,8 +46,5 @@
                 @include('frontend.layouts.right-side.tags')
             </div>
         </div>
-
-
-        
 
 @endsection

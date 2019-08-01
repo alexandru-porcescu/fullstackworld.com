@@ -1,6 +1,7 @@
 @extends('frontend.layouts.default')
 
 @section('content')
+    @include('frontend.home.top-posts')
     <div class="title-box">
         <h2 class="title is-2 is-inline">Latest in Angular</h2>
         <a href="{{ route('tags', ['slug' => 'angular']) }}" title="{{ route('tags', ['slug' => 'angular']) }}"><small class="is-pulled-right">View All</small></a>

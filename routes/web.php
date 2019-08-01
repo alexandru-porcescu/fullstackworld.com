@@ -26,3 +26,8 @@ Route::get('/page/{slug}', 'PageController@index')->name('page');
 Route::get('/stats', 'Admin\StatsController@index')->name('stats');
 
 Route::get('/{slug}', 'TagsController@index')->name('tags');
+
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+
+Route::get('/search/{search}', 'SearchController@index')->name('search');

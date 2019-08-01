@@ -16,14 +16,19 @@ class TagsController
      */
     public function index()
     {
-        $entries = WinkTag::when(request()->has('search'), function ($q) {
+        $query = WinkTag::when(request()->has('search'), function ($q) {
             $q->where('name', 'LIKE', '%'.request('search').'%');
-        })
-            ->orderBy('created_at', 'DESC')
-            ->withCount('posts')
-            ->get();
+        })->orderBy('created_at', 'DESC');
 
-        return TagsResource::collection($entries);
+        $entries = $query->withCount('posts');
+
+        if (! auth('wink')->user()->is_admin) {
+            $entries = $query->withCount(['posts' => function ($query) {
+                $query->where('author_id', auth('wink')->user()->id);
+            }]);
+        }
+
+        return TagsResource::collection($entries->get());
     }
 
     /**
