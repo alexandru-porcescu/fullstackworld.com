@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WinkPost;
 use Wink\WinkAuthor;
+use App\Models\WinkPost;
 
 class AuthorController extends Controller
 {
@@ -16,7 +16,7 @@ class AuthorController extends Controller
     {
         $author = WinkAuthor::where('slug', $username)->first();
 
-        if (!$author) {
+        if (! $author) {
             return abort(404);
         }
 
