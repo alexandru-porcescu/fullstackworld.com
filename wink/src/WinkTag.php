@@ -2,8 +2,13 @@
 
 namespace Wink;
 
-class WinkTag extends AbstractWinkModel
+use CyrildeWit\EloquentViewable\Viewable;
+use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
+
+class WinkTag extends AbstractWinkModel implements ViewableContract
 {
+    use Viewable;
+
     /**
      * The attributes that aren't mass assignable.
      *
