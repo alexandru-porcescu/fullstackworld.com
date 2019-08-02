@@ -8,6 +8,6 @@ class SearchController extends Controller
 {
     public function index($search)
     {
-        return WinkPost::search($search)->get();
+        return WinkPost::search($search)->paginate(5);
     }
 }

@@ -4,7 +4,7 @@
 
         $.get('/search/'+query,
             function (results) {
-                callback(results);
+                callback(results.data);
             }
         );
     }
