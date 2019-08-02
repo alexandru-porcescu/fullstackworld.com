@@ -25,13 +25,6 @@
                     ></vue-goodshare-facebook>
                 </div>
                 <div class="navbar-item">
-                    <vue-goodshare-linked-in
-                            button_design="outline"
-                            has_icon
-                            has_counter
-                    ></vue-goodshare-linked-in>
-                </div>
-                <div class="navbar-item">
                     <vue-goodshare-twitter
                             button_design="outline"
                             has_icon

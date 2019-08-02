@@ -13,7 +13,6 @@ const app = new Vue({
         VueGoodshareFacebook,
         VueGoodshareTwitter,
         VueGoodshareWhatsApp,
-        VueGoodshareLinkedIn,
         VueGoodshareReddit,
     }
 });
