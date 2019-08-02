@@ -28,6 +28,7 @@
         "socialiteproviders/github": "dev-master",
         "spatie/laravel-analytics": "^3.6",
         "spatie/laravel-backup": "^6.1",
+        "teamtnt/laravel-scout-tntsearch-driver": "^7.0",
         "willvincent/feeds": "^1.1",
         "writingink/wink": "*@dev"
     },
