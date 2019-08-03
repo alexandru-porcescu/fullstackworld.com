@@ -47,17 +47,19 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="#">
-                        <i class="fas fa-user-edit is-info"></i>&nbsp;&nbsp;Authors
+                @if(auth('wink')->check())
+                <div class="navbar-item ">
+                    <a class="button is-rounded is-primary is-outlined" href="/wink/posts/new">
+                        <i class="far fa-edit"></i>&nbsp;&nbsp;Write a Post
                     </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="#">
-                            <i class="fas fa-medal has-text-orange"></i>&nbsp;Most Active
+                </div>
+                @else
+                    <div class="navbar-item ">
+                        <a class="button is-rounded is-primary is-outlined open-modal" href="javascript:void(0)" data-modal-id="#login-modal">
+                            <i class="far fa-edit"></i>&nbsp;&nbsp;Write a Post
                         </a>
                     </div>
-                </div>
+                @endif
 
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link is-arrowless" href="{{auth('wink')->check() ? '/wink/posts' : 'javascript:void(0)' }}">

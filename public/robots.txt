@@ -16,4 +16,5 @@ Allow: /angular-news
 Allow: /angular-packages
 
 Disallow: /wink/*
+Disallow: /auth/*
 Disallow: /stats
