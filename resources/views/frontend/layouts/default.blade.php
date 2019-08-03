@@ -12,7 +12,7 @@
 
 </head>
 <body>
-
+<div id="app">
 @include('frontend.layouts.partials._navigation')
 <section class="bd-tws-home section">
         <div class="container is-widescren">
@@ -23,6 +23,6 @@
     @include('frontend.layouts.partials._footer')
 
     @include('frontend.layouts.partials._scripts')
-
+</div>
 </body>
 </html>
