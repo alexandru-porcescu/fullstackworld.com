@@ -12,6 +12,6 @@ $factory->define(\Wink\WinkPost::class, function (Faker $faker) {
         'published' => 1,
         'featured_image' => $faker->imageUrl(),
         'featured_image_caption' => $faker->title,
-        'author_id' => factory(\Wink\WinkAuthor::class)->create()->id
+        'author_id' => factory(\Wink\WinkAuthor::class)->create()->id,
     ];
 });
