@@ -27,7 +27,7 @@ class WinkPost extends WinkPostOriginal
             'id' => $array['id'],
             'slug' => $array['slug'],
             'title' => $array['title'],
-            'excerpt' => $array['excerpt'],
+            'excerpt' => substr($array['excerpt'], 0, 2000),
             'body' => $array['body'],
             'featured_image' => $array['featured_image'],
         ];
