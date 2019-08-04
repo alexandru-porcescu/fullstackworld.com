@@ -17,6 +17,9 @@ class TagsController extends Controller
             return abort(404);
         }
 
+        // Add 60 minutes delay page view entry
+        views($tag)->delayInSession(60)->record();
+
         $pageTitle = 'Latest in '.$tag->name;
 
         $posts = WinkPost::with('tags')->whereHas('tags', function ($query) use ($tag) {

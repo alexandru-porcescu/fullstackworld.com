@@ -34,6 +34,9 @@ class PostsController extends Controller
             return abort(404);
         }
 
+        // Add 60 minutes delay page view entry
+        views($selectedPost)->delayInSession(60)->record();
+
         $postType = $selectedPost->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
         $tags = $selectedPost->tags->pluck('name')->toArray();
 

@@ -184,6 +184,8 @@ return [
 
         \Laravel\Socialite\SocialiteServiceProvider::class,
 
+        \TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+        \CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
     ],
 
     /*

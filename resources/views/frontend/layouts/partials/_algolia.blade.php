@@ -1,12 +1,18 @@
-@if(app()->environment('production'))
-    <script src="{{ asset('js/algolia/algoliasearch.min.js') }}"></script>
-    <script src="{{ asset('js/algolia/autocomplete.min.js') }}"></script>
-    <script>
-        var client = algoliasearch('{{config('scout.algolia.id')}}', '{{config('scout.algolia.secret')}}');
-        var index = client.initIndex('posts');
-        autocomplete('#main-search', { hint: false }, [
+<script src="{{ asset('js/algolia/autocomplete.min.js') }}"></script>
+<script>
+    function search(query, callback) {
+
+        $.get('/search/'+query,
+            function (results) {
+                callback(results.data);
+            }
+        );
+    }
+
+    $(document).ready(function() {
+        autocomplete('#main-search', {minLength: 2}, [
             {
-                source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+                source: search,
                 autoselect: true,
                 templates: {
                     suggestion: function(suggestion) {
@@ -23,5 +29,6 @@
 
         $('#main-search').after('<span class="icon is-medium is-left"><i class="fas fa-search"></i></span>')
 
-    </script>
-@endif
+    });
+
+</script>
