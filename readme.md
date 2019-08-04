@@ -10,6 +10,7 @@
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/fullstackworld/fullstackworld.com/master.svg?style=flat-square)](https://travis-ci.org/fullstackworld/fullstackworld.com)
 [![StyeCI](https://github.styleci.io/repos/188183391/shield)](https://github.styleci.io/repos/188183391/shield)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dce2e94aeaef4ee29d2fd48db87be8b4)](https://www.codacy.com/app/ramesh.mhetre/fullstackworld.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fullstackworld/fullstackworld.com&amp;utm_campaign=Badge_Grade)
 
 Welcome to the [fullstackworld.com](https://fullstackworld.com) codebase. We are so excited to have you here.
 
