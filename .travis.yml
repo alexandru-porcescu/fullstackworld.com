@@ -8,12 +8,6 @@ php:
 
 addons:
   chrome: stable
-#  apt:
-#    sources:
-#      - mysql-5.7-trusty
-#    packages:
-#      - mysql-server
-#      - mysql-client
 
 services:
   - mysql
