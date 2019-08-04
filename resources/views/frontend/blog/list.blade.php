@@ -15,7 +15,7 @@
 
                     <div class="media-content">
                         <h2 class="title is-4"><a href="{{route('post', $post->slug)}}">{{$post->title}}</a></h2>
-                        <p class="subtitle is-6"><a>{{$post->author->name}}</a> / <time datetime="2016-1-1">{{$post->publish_date->diffForHumans()}}</time></p>
+                        <p class="subtitle is-6"><a href="{{route('author', $post->author->slug)}}">{{$post->author->name}}</a> / <time datetime="2016-1-1">{{$post->publish_date->diffForHumans()}}</time></p>
                     </div>
                     </div>
 
