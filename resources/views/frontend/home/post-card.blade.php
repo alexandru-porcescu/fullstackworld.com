@@ -9,16 +9,13 @@
                 </div>
                 <div class="card-content">
                     <div class="media">
-
                         <div class="media-content">
                             <h3 class="title is-4">{{$post->title}}</h3>
                             <p class="subtitle is-5"><time datetime="{{$post->publish_date}}"> {{$post->publish_date->format('M d, Y')}}</time></p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </a>
-
     </div>
 </div>
