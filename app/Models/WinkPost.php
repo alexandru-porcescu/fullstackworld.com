@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Laravel\Scout\Searchable;
 use Wink\WinkPost as WinkPostOriginal;
+use CyrildeWit\EloquentViewable\Viewable;
+use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
 
-class WinkPost extends WinkPostOriginal
+class WinkPost extends WinkPostOriginal implements ViewableContract
 {
-    use Searchable;
+    use Searchable, Viewable;
 
     public function getScoutKey()
     {

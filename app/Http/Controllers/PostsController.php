@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkPost;
+use App\Models\WinkPost;
 
 class PostsController extends Controller
 {
