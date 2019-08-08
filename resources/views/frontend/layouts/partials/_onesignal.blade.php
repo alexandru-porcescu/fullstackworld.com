@@ -1,4 +1,4 @@
-@if(app()->environment('production'))
+@if(app()->environment('production') && false)
 
 <link rel="manifest" href="/manifest.json" />
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
