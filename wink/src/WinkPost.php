@@ -4,7 +4,6 @@ namespace Wink;
 
 class WinkPost extends AbstractWinkModel
 {
-
     /**
      * The attributes that aren't mass assignable.
      *
