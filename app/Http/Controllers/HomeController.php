@@ -11,7 +11,7 @@ class HomeController extends Controller
         $blockAdsense = true;
 
         $topPosts = WinkPost::live()
-            ->orderBy('publish_date', 'DESC')
+            ->orderByViews()
             ->limit(5)
             ->get();
 
