@@ -1,4 +1,10 @@
 exclude_paths:
   - 'wink/**'
   - 'public/**'
+  - 'readme.md'
+  - 'Vagrantfile'
+  - 'server.php'
+  - 'webpack.mix.js'
+  - 'database/**'
+  - 'resources/js/main.js'
   - '**/tests/**'

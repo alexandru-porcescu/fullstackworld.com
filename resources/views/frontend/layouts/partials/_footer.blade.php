@@ -50,7 +50,18 @@
                 <span>
                     Made with <i class="fas fa-heart"></i> in <b>Germany</b>
                 </span>
-
+                <br>
+                <span>
+                    <a href="https://travis-ci.org/fullstackworld/fullstackworld.com">
+                        <img src="https://img.shields.io/travis/fullstackworld/fullstackworld.com/master.svg?style=flat-square">
+                    </a>&nbsp;&nbsp;
+                    <a href="https://github.styleci.io/repos/188183391/shield">
+                        <img src="https://github.styleci.io/repos/188183391/shield">
+                    </a>&nbsp;&nbsp;
+                    <a href="https://www.codacy.com/app/ramesh.mhetre/fullstackworld.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fullstackworld/fullstackworld.com&amp;utm_campaign=Badge_Grade">
+                        <img src="https://api.codacy.com/project/badge/Grade/dce2e94aeaef4ee29d2fd48db87be8b4">
+                    </a>
+                </span>
             </div>
         </div>
     </div>
