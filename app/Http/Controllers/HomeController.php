@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\WinkPost;
+use CyrildeWit\EloquentViewable\Support\Period;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,7 @@ class HomeController extends Controller
         $blockAdsense = true;
 
         $topPosts = WinkPost::live()
-            ->orderByViews()
+            ->orderByViews('asc', Period::pastDays(10))
             ->limit(5)
             ->get();
 
