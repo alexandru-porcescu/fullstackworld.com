@@ -7,8 +7,6 @@
 .env
 public/sitemap.xml
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
 npm-debug.log
 yarn-error.log
 .idea
