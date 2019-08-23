@@ -36,6 +36,7 @@ before_script:
 
 script:
   - php vendor/bin/phpunit --coverage-clover build/coverage/xml
+  - php artisan dusk
 
 after_script:
   - php vendor/bin/codacycoverage clover build/coverage/xml
