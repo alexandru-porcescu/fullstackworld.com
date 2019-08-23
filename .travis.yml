@@ -17,6 +17,7 @@ cache:
     - node_modules
 
 install:
+  - cp .env.travis .env
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
   - travis_retry npm install
   - npm run prod
@@ -24,8 +25,6 @@ install:
 before_script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - mysql -e 'CREATE DATABASE testing;'
-  - cp .env.travis .env
-  - cp .env.travis .env.testing
   - cp phpunit.travis.xml phpunit.xml
   - php artisan key:generate
   - php artisan storage:link
