@@ -28,6 +28,7 @@ before_script:
   - cp phpunit.travis.xml phpunit.xml
   - php artisan key:generate
   - php artisan storage:link
+  - php artisan dusk:chrome-driver
   - php artisan serve &
 
 script:
