@@ -1,6 +1,5 @@
-sudo: true
-dist: xenial
-
+sudo: required
+dist: trusty
 language: php
 
 php:
@@ -18,11 +17,11 @@ cache:
     - node_modules
 
 install:
-  - composer self-update
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - travis_retry npm install
+  - npm run prod
 
 before_script:
-  - rm composer.lock
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - mysql -e 'CREATE DATABASE testing;'
   - cp .env.travis .env
@@ -30,8 +29,6 @@ before_script:
   - cp phpunit.travis.xml phpunit.xml
   - php artisan key:generate
   - php artisan storage:link
-  - npm install
-  - npm run prod
   - php artisan serve &
 
 script:
