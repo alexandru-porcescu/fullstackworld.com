@@ -1,5 +1,5 @@
 sudo: true
-dist: trusty
+dist: xenial
 
 language: php
 
@@ -8,12 +8,6 @@ php:
 
 addons:
   chrome: stable
-  apt:
-    sources:
-      - mysql-5.7-trusty
-    packages:
-      - mysql-server
-      - mysql-client
 
 services:
   - mysql
@@ -44,6 +38,8 @@ script:
   - php vendor/bin/phpunit --coverage-clover build/coverage/xml
 
 after_script:
+  - php vendor/bin/codacycoverage clover build/coverage/xml
+  - git checkout .
 
 notifications:
   email: false

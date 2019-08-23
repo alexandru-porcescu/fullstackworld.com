@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Laravel\Scout\Searchable;
 use Wink\WinkPost as WinkPostOriginal;
+use CyrildeWit\EloquentViewable\Viewable;
+use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
 
-class WinkPost extends WinkPostOriginal
+class WinkPost extends WinkPostOriginal implements ViewableContract
 {
-    use Searchable;
+    use Searchable, Viewable;
 
     public function getScoutKey()
     {
@@ -27,11 +29,22 @@ class WinkPost extends WinkPostOriginal
             'id' => $array['id'],
             'slug' => $array['slug'],
             'title' => $array['title'],
-            'excerpt' => $array['excerpt'],
+            'excerpt' => substr($array['excerpt'], 0, 2000),
             'body' => $array['body'],
             'featured_image' => $array['featured_image'],
         ];
 
         return $data;
+    }
+
+    public static function getPostsByTag($tagSlug, $limit = 6)
+    {
+        return self::whereHas('tags', function ($query) use ($tagSlug) {
+            $query->where('slug', $tagSlug);
+        })
+            ->live()
+            ->orderBy('publish_date', 'DESC')
+            ->limit($limit)
+            ->get();
     }
 }

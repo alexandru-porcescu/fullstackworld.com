@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkPost;
+use App\Models\WinkPost;
 
 class PostsController extends Controller
 {
@@ -33,6 +33,9 @@ class PostsController extends Controller
         if (! $selectedPost) {
             return abort(404);
         }
+
+        // Add 60 minutes delay page view entry
+        views($selectedPost)->delayInSession(60)->record();
 
         $postType = $selectedPost->tags->where('name', 'Journal')->count() ? 'Journal' : 'Post';
         $tags = $selectedPost->tags->pluck('name')->toArray();

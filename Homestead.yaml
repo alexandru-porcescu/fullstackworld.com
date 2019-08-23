@@ -18,3 +18,5 @@ databases:
     - testing
 name: fullstackworld
 hostname: fullstackworld
+features:
+    - webdriver: true

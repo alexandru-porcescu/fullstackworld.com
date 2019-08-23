@@ -16,7 +16,7 @@ return [
     'cookie' => [
 
         //Enable/Disable cookie box on the application
-        'enabled' => true,
+        'enabled' => false,
 
         // In case of translations just add translatable string
         'body' => 'We\'re using cookies on this website. Would you like to share some?',

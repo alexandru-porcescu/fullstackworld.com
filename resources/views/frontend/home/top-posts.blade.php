@@ -12,8 +12,8 @@
                         </div>
                         <div class="media-content">
                             <p class="subtitle is-6 has-text-grey">
-                                <a href="javascript:void(0)" class="is-link">{{$topPosts[0]->author->name}}</a>
-                                <small class="is-pulled-right">{{$topPosts[0]->publish_date->diffForHumans()}}</small>
+                                <a href="{{route('author', $topPosts[0]->author->slug)}}" class="is-link">{{$topPosts[0]->author->name}}</a>
+                                <small class="is-pulled-right">{{views($topPosts[0])->count()}} <i class="fas fa-check-double"></i></small>
                             </p>
                         </div>
                     </div>
@@ -29,8 +29,8 @@
                         </div>
                         <div class="media-content">
                             <p class="subtitle is-6 has-text-grey">
-                                <a href="javascript:void(0)" class="is-link">{{$topPosts[1]->author->name}}</a>
-                                <small class="is-pulled-right">{{$topPosts[1]->publish_date->diffForHumans()}}</small>
+                                <a href="{{route('author', $topPosts[1]->author->slug)}}" class="is-link">{{$topPosts[1]->author->name}}</a>
+                                <small class="is-pulled-right">{{views($topPosts[1])->count()}} <i class="fas fa-check-double"></i></small>
                             </p>
                         </div>
                     </div>
@@ -51,8 +51,8 @@
                         <div class="media-content">
 
                             <p class="subtitle is-6 has-text-dark">
-                                <a href="javascript:void(0)">{{$topPosts[2]->author->name}}</a>
-                                <small class="is-pulled-right">{{$topPosts[2]->publish_date->diffForHumans()}}</small>
+                                <a href="{{route('author', $topPosts[2]->author->slug)}}">{{$topPosts[2]->author->name}}</a>
+                                <small class="is-pulled-right">{{views($topPosts[2])->count()}} <i class="fas fa-check-double"></i></small>
                             </p>
                         </div>
                     </div>
@@ -71,8 +71,8 @@
                     </div>
                     <div class="media-content">
                         <p class="subtitle is-6 has-text-grey">
-                            <a href="javascript:void(0)">{{$topPosts[3]->author->name}}</a>
-                            <small class="is-pulled-right">{{$topPosts[3]->publish_date->diffForHumans()}}</small>
+                            <a href="{{route('author', $topPosts[3]->author->slug)}}">{{$topPosts[3]->author->name}}</a>
+                            <small class="is-pulled-right">{{views($topPosts[3])->count()}} <i class="fas fa-check-double"></i></small>
                         </p>
                     </div>
                 </div>
@@ -97,8 +97,8 @@
                 <div class="media-content">
 
                     <p class="subtitle is-6 has-text-grey-dark">
-                        <a href="javascript:void(0)">{{$topPosts[4]->author->name}}</a>
-                        <small class="is-pulled-right">{{$topPosts[4]->publish_date->diffForHumans()}}</small>
+                        <a href="{{route('author', $topPosts[4]->author->slug)}}">{{$topPosts[4]->author->name}}</a>
+                        <small class="is-pulled-right">{{views($topPosts[4])->count()}} <i class="fas fa-check-double"></i></small>
                     </p>
                 </div>
             </div>
