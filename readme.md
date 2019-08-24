@@ -34,7 +34,7 @@ Below requirements and quick-start guide is based on standards which we recommen
 1. Make sure the prerequisites are installed.
 2. Git clone this repository(`git clone git@github.com:fullstackworld/fullstackworld.com.git`)
 3. `cp .env.example .env`
-4. `composer install`
+4. `composer install --ignore-platform-reqs`
 5. `vagrant up`
 6. After vagrant setup done, do `vagrant ssh` & `cd code && php artisan migrate --seed`
 7. Add entry of host in your hosts `192.168.11.11  fullstackworld.test`
