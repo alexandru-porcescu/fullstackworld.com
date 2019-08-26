@@ -26,7 +26,6 @@
     });
 </script>
 @include('frontend.layouts.partials._algolia')
-@include('frontend.layouts.partials._hotjar')
 @include('frontend.layouts.partials._onesignal')
 
 @include('bulma::notifications')
