@@ -52,14 +52,18 @@
                 </span>
                 <br>
                 <span>
-                    <a href="https://travis-ci.org/fullstackworld/fullstackworld.com">
+                    <a href="https://travis-ci.org/fullstackworld/fullstackworld.com?utm_source=fullstackworld.com&amp;utm_medium=referral&amp;utm_content=fullstackworld.com&amp;utm_campaign=Badge_Grade" target="_blank">
                         <img src="https://img.shields.io/travis/fullstackworld/fullstackworld.com/master.svg?style=flat-square">
                     </a>&nbsp;&nbsp;
-                    <a href="https://github.styleci.io/repos/188183391/shield">
+                    <a href="https://github.styleci.io/repos/188183391?utm_source=fullstackworld.com&amp;utm_medium=referral&amp;utm_content=fullstackworld.com&amp;utm_campaign=Badge_Grade" target="_blank">
                         <img src="https://github.styleci.io/repos/188183391/shield">
                     </a>&nbsp;&nbsp;
-                    <a href="https://www.codacy.com/app/ramesh.mhetre/fullstackworld.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fullstackworld/fullstackworld.com&amp;utm_campaign=Badge_Grade">
+                    <a href="https://www.codacy.com/app/ramesh.mhetre/fullstackworld.com?utm_source=fullstackworld.com&amp;utm_medium=referral&amp;utm_content=fullstackworld/fullstackworld.com&amp;utm_campaign=Badge_Grade" target="_blank">
                         <img src="https://api.codacy.com/project/badge/Grade/dce2e94aeaef4ee29d2fd48db87be8b4">
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="https://ploi.io?utm_source=fullstackworld.com&amp;utm_medium=referral&amp;utm_content=fullstackworld.com&amp;utm_campaign=Badge_Grade" target="_blank">
+                        <img src="https://img.shields.io/badge/deployed-@ploi.io-brightgreen.svg?style=flat-square">
                     </a>
                 </span>
             </div>
