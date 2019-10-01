@@ -9,7 +9,7 @@
     @include('frontend.layouts.partials._styles')
     @include('frontend.layouts.partials._analytics')
     @include('frontend.layouts.partials._addsense')
-    @include('frontend.layouts.partials._cookiebot')
+    @include('frontend.layouts.partials._cookybar')
 
 </head>
 <body>

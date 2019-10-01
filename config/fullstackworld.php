@@ -5,5 +5,5 @@ return [
 
     'google_adsense' => env('GOOGLE_ADSENSE', false),
 
-    'show_cookiebar' => env('SHOW_COOKIEBAR', true),
+    'show_cookybar' => env('SHOW_COOKYBAR', true),
 ];
