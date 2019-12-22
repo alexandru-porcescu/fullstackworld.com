@@ -1,5 +1,5 @@
 @if(app()->environment('production') && config('fullstackworld.show_cookybar'))
 
-    <script id="cookybar_script" src="https://cookybar.com/js/website/init.js" uuid="8d8880fb-96da-4096-9f96-258834ba27f4" type="text/javascript" async></script>
+    <script id="cookybar_script" src="https://cookybar.com/js/website/init.js" uuid="dabdc90b-2652-4550-b0ca-f60cae64b06f" type="text/javascript" async></script>
 
 @endif
