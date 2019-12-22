@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkTag;
 use Wink\WinkPost;
+use Wink\WinkTag;
 
 class TagsController extends Controller
 {

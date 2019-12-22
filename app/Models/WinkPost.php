@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
+use CyrildeWit\EloquentViewable\Viewable;
 use Laravel\Scout\Searchable;
 use Wink\WinkPost as WinkPostOriginal;
-use CyrildeWit\EloquentViewable\Viewable;
-use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
 
 class WinkPost extends WinkPostOriginal implements ViewableContract
 {

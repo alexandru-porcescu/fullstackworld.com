@@ -2,8 +2,8 @@
 
 namespace Wink;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class WinkAuthor extends AbstractWinkModel implements Authenticatable
 {
