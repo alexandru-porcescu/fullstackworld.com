@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Wink\WinkTag;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Wink\WinkTag;
 
 class AppServiceProvider extends ServiceProvider
 {

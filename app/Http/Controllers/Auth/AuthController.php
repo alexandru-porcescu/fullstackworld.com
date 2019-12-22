@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Wink\WinkAuthor;
-use Illuminate\Support\Str;
-use App\Notifications\Welcome;
 use App\Http\Controllers\Controller;
+use App\Notifications\Welcome;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
+use Wink\WinkAuthor;
 
 class AuthController extends Controller
 {

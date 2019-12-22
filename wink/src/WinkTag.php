@@ -2,8 +2,8 @@
 
 namespace Wink;
 
-use CyrildeWit\EloquentViewable\Viewable;
 use CyrildeWit\EloquentViewable\Contracts\Viewable as ViewableContract;
+use CyrildeWit\EloquentViewable\Viewable;
 
 class WinkTag extends AbstractWinkModel implements ViewableContract
 {

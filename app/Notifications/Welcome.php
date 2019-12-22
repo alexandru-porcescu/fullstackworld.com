@@ -2,10 +2,10 @@
 
 namespace App\Notifications;
 
-use Wink\WinkAuthor;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
+use Wink\WinkAuthor;
 
 class Welcome extends Notification
 {

@@ -2,15 +2,15 @@
 
 namespace App\Console\Commands;
 
-use Wink\WinkTag;
-use Carbon\Carbon;
-use Wink\WinkPage;
-use Wink\WinkPost;
 use App\Mail\CommandFinished;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
+use Wink\WinkPage;
+use Wink\WinkPost;
+use Wink\WinkTag;
 
 class CreateSitemap extends Command
 {

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Wink\WinkAuthor;
 use App\Models\WinkPost;
+use Wink\WinkAuthor;
 
 class AuthorController extends Controller
 {

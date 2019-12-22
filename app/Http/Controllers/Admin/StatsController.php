@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use Analytics;
-use Wink\WinkPost;
-use Spatie\Analytics\Period;
 use App\Http\Controllers\Controller;
+use Spatie\Analytics\Period;
+use Wink\WinkPost;
 
 class StatsController extends Controller
 {

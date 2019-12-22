@@ -3,8 +3,8 @@
 namespace Wink;
 
 use Illuminate\Support\Facades\Route;
-use Wink\Http\Middleware\Authenticate;
 use Illuminate\Support\ServiceProvider;
+use Wink\Http\Middleware\Authenticate;
 
 class WinkServiceProvider extends ServiceProvider
 {
