@@ -17,6 +17,7 @@
         </div>
         <div class="column is-3">
             @include('frontend.layouts.right-side.tags')
+            @include('frontend.layouts.right-side.ads')
         </div>
 
     </div>
